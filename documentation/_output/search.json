@@ -1,0 +1,710 @@
+[
+  {
+    "objectID": "04-results.html",
+    "href": "04-results.html",
+    "title": "Results & Conclusions",
+    "section": "",
+    "text": "This analysis examined [X] flight diversions across the United States from July 2021 to December 2024, identifying [Y] distinct diversion clusters and uncovering patterns in when, where, and how flights are redirected from their intended destinations.\nMain Finding: Flight diversions are not random; they cluster around specific hub airports during specific time periods, suggesting systematic operational vulnerabilities in the U.S. aviation system.",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#executive-summary",
+    "href": "04-results.html#executive-summary",
+    "title": "Results & Conclusions",
+    "section": "",
+    "text": "This analysis examined [X] flight diversions across the United States from July 2021 to December 2024, identifying [Y] distinct diversion clusters and uncovering patterns in when, where, and how flights are redirected from their intended destinations.\nMain Finding: Flight diversions are not random; they cluster around specific hub airports during specific time periods, suggesting systematic operational vulnerabilities in the U.S. aviation system.",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#key-findings",
+    "href": "04-results.html#key-findings",
+    "title": "Results & Conclusions",
+    "section": "2 Key Findings",
+    "text": "2 Key Findings\n\n2.1 Finding 1: [TITLE]\nThe Discovery: [Describe what you found - 2-3 sentences]\nEvidence: - [Specific data point from your analysis] - [Specific data point from your analysis] - [Specific data point from your analysis]\nWhy It Matters: [Explain the operational or strategic significance - Who cares? Why should they?]\nRelated Pattern: This appears most prominently in [Cluster X] during [DATE RANGE], affecting [AIRPORT] primarily.\n\n\n\n2.2 Finding 2: [TITLE]\nThe Discovery: [Describe what you found - 2-3 sentences]\nEvidence: - [Specific data point] - [Specific data point] - [Specific data point]\nWhy It Matters: [Explain significance]\nRelated Pattern: [Which clusters show this? Which airlines?]\n\n\n\n2.3 Finding 3: [TITLE]\nThe Discovery: [Describe what you found - 2-3 sentences]\nEvidence: - [Specific data point] - [Specific data point] - [Specific data point]\nWhy It Matters: [Explain significance]\nRelated Pattern: [Which clusters show this?]",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#quantitative-summary",
+    "href": "04-results.html#quantitative-summary",
+    "title": "Results & Conclusions",
+    "section": "3 Quantitative Summary",
+    "text": "3 Quantitative Summary\n\n\n\nMetric\nValue\n\n\n\n\nTotal Diversions Analyzed\n[X]\n\n\nTime Period\nJuly 2021 - December 2024\n\n\nDiversion Clusters Identified\n[X]\n\n\nUnique Airports Involved\n[Y]\n\n\nAirlines in Dataset\n[Z]\n\n\nAverage Daily Diversions\n[A]\n\n\nPeak Day Diversions\n[B] on [DATE]\n\n\nMost Common Diversion Airport\n[AIRPORT] with [C] diversions\n\n\nAverage Departure Delay (Diverted)\n[D] minutes\n\n\nAverage Arrival Delay (Diverted)\n[E] minutes",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#cluster-summary",
+    "href": "04-results.html#cluster-summary",
+    "title": "Results & Conclusions",
+    "section": "4 Cluster Summary",
+    "text": "4 Cluster Summary\n\n4.1 Cluster 1: [NAME]\n\nPrimary Destination: [AIRPORT]\nCommon Diversion: [AIRPORT]\nPeriod: [DATE RANGE]\nNumber of Events: [X]\nUnique Origins: [Y]\nAirlines Affected: [LIST]\nSignificance: [Why was this cluster important?]\n\n\n\n4.2 Cluster 2: [NAME]\n\nPrimary Destination: [AIRPORT]\nCommon Diversion: [AIRPORT]\nPeriod: [DATE RANGE]\nNumber of Events: [X]\nUnique Origins: [Y]\nAirlines Affected: [LIST]\nSignificance: [Why was this cluster important?]\n\n\n\n4.3 Cluster 3: [NAME]\n\nPrimary Destination: [AIRPORT]\nCommon Diversion: [AIRPORT]\nPeriod: [DATE RANGE]\nNumber of Events: [X]\nUnique Origins: [Y]\nAirlines Affected: [LIST]\nSignificance: [Why was this cluster important?]",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#operational-implications",
+    "href": "04-results.html#operational-implications",
+    "title": "Results & Conclusions",
+    "section": "5 Operational Implications",
+    "text": "5 Operational Implications\n\n5.1 For Airlines\nRecommendation 1: [Based on your findings, what should airlines do?] - Example: “Pre-position aircraft at [AIRPORT] during [SEASON] to handle anticipated diversions”\nRecommendation 2: [Another operational insight] - Example: “Route planning should account for [AIRPORT] capacity constraints”\n\n\n5.2 For Airport Operations\nFinding: [What do airport operators need to know?] - [Specific implication] - [Specific implication]\n\n\n5.3 For Policy Makers\nSystem-Level Insight: [What does this tell us about air traffic management?] - [Implication 1] - [Implication 2]",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#statistical-confidence",
+    "href": "04-results.html#statistical-confidence",
+    "title": "Results & Conclusions",
+    "section": "6 Statistical Confidence",
+    "text": "6 Statistical Confidence\n\n6.1 Methodology Validation\nData Quality: - [X]% of records had complete geographic data - [Y]% of records had valid airline information - No significant gaps in time period coverage\nAnalysis Rigor: - K-means clustering with [K] clusters (validated via elbow method) - [X] total records analyzed - Geospatial analysis using standardized airport coordinates\nLimitations on Confidence: - Weather data not available (cannot verify causation) - Only first diversion tracked (cascade effects unknown) - Diversion reason not recorded in BTS data\n\n\n6.2 Can We Generalize These Findings?\nYes, for: - Identifying which airports experience most diversions - Understanding seasonal patterns - Ranking airlines by diversion frequency - Geographic clustering patterns\nCautiously, for: - Predicting future diversions (patterns may change) - Determining causes of diversions - Quantifying passenger impact\nNo, for: - Specific weather-related predictions - Mechanical failure analysis - International flight patterns",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#what-surprised-us",
+    "href": "04-results.html#what-surprised-us",
+    "title": "Results & Conclusions",
+    "section": "7 What Surprised Us",
+    "text": "7 What Surprised Us\nSurprise 1: [What did you not expect to find?] - Expected: [What you thought would happen] - Found: [What actually happened] - Explanation: [Why might this be?]\nSurprise 2: [Another unexpected finding] - Expected vs. Found vs. Why\nSurprise 3: [Third unexpected insight] - Expected vs. Found vs. Why",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#what-this-reveals-about-aviation",
+    "href": "04-results.html#what-this-reveals-about-aviation",
+    "title": "Results & Conclusions",
+    "section": "8 What This Reveals About Aviation",
+    "text": "8 What This Reveals About Aviation\n\n8.1 The Bigger Picture\nThis analysis reveals that the U.S. aviation system [INSERT INSIGHT]: - [Point 1 about system resilience/vulnerability] - [Point 2 about operational patterns] - [Point 3 about capacity or planning]\n\n\n8.2 System Resilience\nPositive: [What this data shows about system strengths] - Example: “Hub airports successfully absorb diversions [X]% of the time”\nNegative: [What this data shows about vulnerabilities] - Example: “[AIRPORT] becomes bottleneck when [X] happens”\n\n\n8.3 Passenger Experience Implications\nFor the [X] passengers affected by these diversions: - Average delay impact: [Y] minutes - Cascade effect: Delays to next flights: [Z] minutes - System recovery time: [A] hours",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#limitations-of-this-analysis",
+    "href": "04-results.html#limitations-of-this-analysis",
+    "title": "Results & Conclusions",
+    "section": "9 Limitations of This Analysis",
+    "text": "9 Limitations of This Analysis\n\n9.1 Data Limitations\n\nNo Weather Context:\n\nCannot determine if diversions were weather-related\nBTS data lacks concurrent weather conditions\nImpact: Cannot verify our assumptions about causation\n\nSingle Diversion Only:\n\nBTS only records first diversion\nCascading diversions not tracked\nImpact: May underestimate true system disruption\n\nNo Diversion Reason:\n\nCannot distinguish: weather vs. mechanical vs. ATC\nImpact: Cannot identify root causes\n\nU.S. Domestic Only:\n\nInternational diversions excluded\nImpact: Incomplete picture of some carriers\n\n\n\n\n9.2 Methodological Limitations\n\nK-Means Assumptions:\n\nAssumes spherical clusters\nMay miss irregular patterns\nMitigation: Cluster results validated visually on maps\n\nGeographic Clustering:\n\nAssumes nearby airports are related\nMay miss causal relationships\nMitigation: Temporal clustering helps address this\n\nTime Periods:\n\nDataset spans 45 months but not comprehensive\nSome recent events (post-Dec 2024) not included\nImpact: Patterns may have shifted since dataset ends",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#future-research-directions",
+    "href": "04-results.html#future-research-directions",
+    "title": "Results & Conclusions",
+    "section": "10 Future Research Directions",
+    "text": "10 Future Research Directions\n\n10.1 Short Term (Easy to Do)\n\nAdd Weather Data\n\nJoin BTS diversions with NOAA weather data\nValidate weather-related diversion hypothesis\nIdentify weather-sensitive airports\n\nTrack Cascading Effects\n\nFollow diversions through secondary flights\nQuantify passenger impact more fully\nModel cascade duration\n\nAirline Strategy Analysis\n\nCompare routing strategies between carriers\nIdentify best practices for diversion handling\nBenchmark airline performance\n\n\n\n\n10.2 Medium Term (More Work)\n\nPredictive Modeling\n\nUse scikit-learn to predict diversion likelihood\nInput: Route, date, season, weather forecast\nOutput: Diversion probability\n\nNetwork Analysis\n\nModel aviation system as network\nIdentify critical nodes (airports)\nAnalyze network resilience\n\nEconomic Impact\n\nEstimate costs of diversions to airlines\nCalculate passenger impact (delays, missed connections)\nQuantify systemic efficiency loss\n\n\n\n\n10.3 Long Term (Ambitious)\n\nPolicy Recommendation Engine\n\nUse ML to recommend infrastructure investments\nIdentify bottleneck airports needing capacity\nModel impact of policy changes\n\nReal-Time Diversion Forecasting\n\nIntegrate real-time weather and flight data\nPredict diversions 24-48 hours in advance\nAlert airlines and passengers proactively",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#reproducibility",
+    "href": "04-results.html#reproducibility",
+    "title": "Results & Conclusions",
+    "section": "11 Reproducibility",
+    "text": "11 Reproducibility\nThis analysis can be reproduced by:\n\nDownloading Data:\n\nVisit https://www.transtats.bts.gov/\nDownload OTMC-OTP monthly files (2021-07 to 2024-12)\n\nRunning Analysis:\n\nExecute 01-data-cleaning.ipynb to process raw data\nRun 02-clustering.ipynb to identify clusters\nGenerate visualizations from 03-visualizations.ipynb\n\nCode Availability:\n\nAll analysis code provided in GitHub repository\nPython environment specified in requirements.txt\nInstructions in main README",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#conclusion",
+    "href": "04-results.html#conclusion",
+    "title": "Results & Conclusions",
+    "section": "12 Conclusion",
+    "text": "12 Conclusion\nFlight diversions in the U.S. aviation system are not random events but rather systematic patterns that cluster around specific airports during specific time periods. This analysis identified [X] major diversion clusters, each affecting hundreds of flights and thousands of passengers.\nThe findings suggest that:\n\n[FINDING 1] - Implication for airlines/airports/passengers\n[FINDING 2] - Implication for airlines/airports/passengers\n[FINDING 3] - Implication for airlines/airports/passengers\n\nBy understanding these patterns, stakeholders in aviation operations can: - Airports: Better plan capacity and staffing - Airlines: Optimize routing and crew scheduling - Passengers: Anticipate and prepare for disruptions - Policy Makers: Identify infrastructure needs\nThis work demonstrates that publicly available transportation data, when combined with modern data science techniques, can reveal actionable insights into complex system behavior.",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#references",
+    "href": "04-results.html#references",
+    "title": "Results & Conclusions",
+    "section": "13 References",
+    "text": "13 References\n\n13.1 Data Sources\n\nU.S. Bureau of Transportation Statistics (BTS): https://www.transtats.bts.gov/\n[Other sources used]\n\n\n\n13.2 Methods\n\nK-Means Clustering: [Scikit-learn documentation]\nGeospatial Analysis: [GeoPandas documentation]\n[Other method references]\n\n\n\n13.3 Related Work\n\n[Academic papers on aviation disruptions, if any cited]\n[Industry reports on flight diversions]",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "04-results.html#about-this-analysis",
+    "href": "04-results.html#about-this-analysis",
+    "title": "Results & Conclusions",
+    "section": "14 About This Analysis",
+    "text": "14 About This Analysis\nProject Type: Data Science Final Project Analysis Period: July 2021 - December 2024 Total Records: [X] flight diversions Methods: K-means clustering, geospatial analysis, temporal analysis Technologies: Python, Pandas, GeoPandas, Scikit-learn, Plotly\nAuthor: [Your Name] Date Completed: [DATE] Last Updated: [DATE]\n\nQuestions or Comments? This analysis is open for discussion and feedback. The patterns identified suggest areas for further investigation and practical application in aviation operations.",
+    "crumbs": [
+      "Data Collection",
+      "Results & Conclusions"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "",
+    "text": "This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining data-driven analysis with interactive visualizations, we uncover patterns in when, where, and why flights are diverted from their intended destinations. Could this tell us something about airlines as well?",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "",
+    "text": "This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining data-driven analysis with interactive visualizations, we uncover patterns in when, where, and why flights are diverted from their intended destinations. Could this tell us something about airlines as well?",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#why-this-matters",
+    "href": "index.html#why-this-matters",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "2 Why This Matters",
+    "text": "2 Why This Matters\nFlight diversions represent a significant disruption to both airlines and passengers. Understanding diversion patterns helps:\n\nAirlines: Optimize route planning and operational resilience. By identifying which airports, time periods, and recovery issues are prone to diversions, airlines can pre-position aircraft, adjust crew schedules, and reroute flights proactively. This minimizes operational costs and improves schedule reliability.\nPolicymakers: Identify systemic bottlenecks in air traffic management. Diversion clusters reveal capacity constraints at specific airports, informing infrastructure investment decisions and air traffic control policy.\nResearchers: Better understand the vulnerabilities and resilience patterns in the aviation system. Flight diversions expose how the network responds to disruptions and reveal dependencies between airports.",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "3 Project Overview",
+    "text": "3 Project Overview\n\n3.1 Key Findings\n\n64,816 total diversions documented across the 07/2021-12/2024 period, totaling 25,386,632 flights (0.255%)\n10 distinct airlines in the dataset\nClassification of diversion clusters and their affect on the airport network across the U.S.\n\n\n\n3.2 Methodology\nThis project follows a complete data science pipeline:\n\nData Collection: Aggregating 42 months of BTS data and airport location data.\nData Cleaning: Filtering, validation, and integration\nAnalysis: Clustering and temporal analysis.\nVisualization: Interactive maps of major clusters and their affect on the airport system.\nCommunication: Clear documentation and insights.",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#interactive-dashboard",
+    "href": "index.html#interactive-dashboard",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "4 Interactive Dashboard",
+    "text": "4 Interactive Dashboard\nExplore the data yourself with my interactive dashboard.\nInteract with filters, zoom into specific airports, and explore patterns by date, and airline. :::",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#documentation-structure",
+    "href": "index.html#documentation-structure",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "5 Documentation Structure",
+    "text": "5 Documentation Structure\nThis site contains:\n\nData Collection: How I sourced and prepared the data\nAnalysis: Methodology, findings, and statistical insights\nVisualizations: Interactive maps and their interpretations\nResults: Key takeaways and conclusions",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#quick-stats",
+    "href": "index.html#quick-stats",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "6 Quick Stats",
+    "text": "6 Quick Stats\n\n\n\nMetric\nValue\n\n\n\n\nTime Period\nJuly 2021 - December 2024\n\n\nData Sources\nBTS OTMC-OTP Database, FAA Database\n\n\nAnalysis Type\nGeospatial Clustering, Temporal Analysis\n\n\nVisualizations\nInteractive Plotly maps\n\n\nTotal Diversions\n64,816",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-project",
+    "href": "index.html#about-this-project",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "7 About This Project",
+    "text": "7 About This Project\nThis analysis was conducted as a final project for a Python data science course, emphasizing:\n\nMulti-source data integration\nComplex geospatial analysis\nInteractive web-based visualization\nClear communication of technical findings\n\n\n7.1 Technologies Used\n\nData Processing: Pandas, GeoPandas, NumPy\nAnalysis: Scikit-learn (K-means clustering), SciPy\nVisualization: Plotly, Matplotlib\nDocumentation: Quarto, Jupyter\nDeployment: GitHub Pages",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#get-started",
+    "href": "index.html#get-started",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "8 Get Started",
+    "text": "8 Get Started\n\nRead through the Data Collection section to understand the data sources\nExplore the Analysis for methodology\nCheck out the Visualizations for interactive exploration",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#questions",
+    "href": "index.html#questions",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "9 Questions?",
+    "text": "9 Questions?\nThis project demonstrates: - Sound data science methodology - Complex analysis of real-world aviation data - Clear communication of technical findings - Effective use of interactive visualization\nFor questions about the methodology, data sources, or analysis approach, see the detailed documentation pages.",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "index.html#citation",
+    "href": "index.html#citation",
+    "title": "Flight Diversions: Understanding Air Traffic Disruptions",
+    "section": "10 Citation",
+    "text": "10 Citation\nIf you reference this analysis, please cite as:\n\nLuu, Jennifer. (2024). Flight Diversions: A Data Science Analysis. GitHub Repository: [add repo link]\n\n\nLast Updated: [DATE]",
+    "crumbs": [
+      "Home",
+      "Flight Diversions: Understanding Air Traffic Disruptions"
+    ]
+  },
+  {
+    "objectID": "05-dashboard.html",
+    "href": "05-dashboard.html",
+    "title": "Interactive Dashboard",
+    "section": "",
+    "text": "This page documents the interactive Panel dashboard developed to explore flight diversion patterns. The dashboard allows users to filter and analyze diversions in real-time using multiple interactive controls."
+  },
+  {
+    "objectID": "05-dashboard.html#overview",
+    "href": "05-dashboard.html#overview",
+    "title": "Interactive Dashboard",
+    "section": "",
+    "text": "This page documents the interactive Panel dashboard developed to explore flight diversion patterns. The dashboard allows users to filter and analyze diversions in real-time using multiple interactive controls."
+  },
+  {
+    "objectID": "05-dashboard.html#dashboard-features",
+    "href": "05-dashboard.html#dashboard-features",
+    "title": "Interactive Dashboard",
+    "section": "2 Dashboard Features",
+    "text": "2 Dashboard Features\n\n2.1 Interactive Filters\nThe dashboard includes three main filters that work together to subset the data:\n1. Airline Selection - Multi-select dropdown to choose one or more airlines - Default: Top 3 airlines by diversion count - Enables airline-specific analysis and comparison\n2. Date Range Slider - Specify custom date ranges (July 2021 - December 2024) - Allows temporal analysis of diversions - Supports seasonal pattern exploration\n3. Dynamic Summary Statistics - Updates automatically when filters change - Displays: - Total diversions in filtered dataset - Number of unique diversion airports - Average departure delay (in minutes)\n\n\n2.2 Visualizations\n\n2.2.1 Top Diversion Airports Map\n\nInteractive geographic map showing the top 15 diversion airports\nMarker size represents frequency of diversions\nHover over airports to see exact diversion counts\nAllows geographic pattern identification\n\nWhat it shows: Which airports are receiving the most diverted flights during the selected time period and for chosen airlines.\nHow to interpret: Larger circles = more diversions. Geographic clusters suggest regional capacity issues.\n\n\n2.2.2 Diversions by Airline Bar Chart\n\nHorizontal bar chart ranking airlines by diversion count\nColors distinguish between airlines\nHover for exact numbers\n\nWhat it shows: How diversions are distributed across airlines in your filtered dataset.\nHow to interpret: Comparison of operational disruption frequency by carrier. May reflect differences in route networks, fleet size, or operational practices.\n\n\n2.2.3 Summary Statistics Cards\n\nThree key metrics displayed prominently\nBackground colors for quick visual scanning\nUpdate in real-time as filters change\n\nMetrics: 1. Total Diversions (Blue) - Sum of all diversions matching filters 2. Diversion Airports (Purple) - Count of unique airports receiving diversions 3. Avg Departure Delay (Green) - Mean delay for diverted flights"
+  },
+  {
+    "objectID": "05-dashboard.html#how-to-use-the-dashboard",
+    "href": "05-dashboard.html#how-to-use-the-dashboard",
+    "title": "Interactive Dashboard",
+    "section": "3 How to Use the Dashboard",
+    "text": "3 How to Use the Dashboard\n\n3.1 Basic Workflow\n\nStart with full dataset\n\nAll airlines selected\nFull date range (July 2021 - December 2024)\n\nSelect airlines of interest\n\nClick on airline dropdown\nChoose one or more carriers\nDashboard updates automatically\n\nNarrow date range\n\nUse date slider to focus on time period\nHelpful for identifying seasonal patterns\nCan zoom into specific disruption events\n\nAnalyze results\n\nCheck summary statistics\nExplore geographic distribution on map\nCompare airlines using bar chart\n\n\n\n\n3.2 Example Analyses\nFind Peak Diversion Periods - Set date range to one month - Select all airlines - Identify which airports spike in activity\nCompare Airline Performance - Set date range to full dataset - Select one airline at a time - Compare summary statistics across carriers\nExplore Regional Events - Focus on date range when you know a disruption occurred - Select relevant airlines - Analyze geographic concentration of diversions"
+  },
+  {
+    "objectID": "05-dashboard.html#technical-details",
+    "href": "05-dashboard.html#technical-details",
+    "title": "Interactive Dashboard",
+    "section": "4 Technical Details",
+    "text": "4 Technical Details\n\n4.1 Technology Stack\n\nFramework: Panel (by HoloViz)\nData Processing: Pandas\nVisualization: Plotly\nData Source: BTS OTMC-OTP database (2021-2024)\n\n\n\n4.2 Cross-Filtering Implementation\nThe dashboard uses Panel’s reactive decorators (@pn.depends()) to automatically update all visualizations when any filter changes. This means: - Changing airline selection updates the map and chart - Adjusting date range recalculates all statistics - All changes are instantaneous (no need to click “Update”)\n\n\n4.3 Performance Considerations\n\nDashboard loads [X] total diversion records\nFiltering operations complete in &lt;1 second\nMap rendering optimized for smooth interaction\nDesigned for [X] GB of data"
+  },
+  {
+    "objectID": "05-dashboard.html#insights-from-dashboard",
+    "href": "05-dashboard.html#insights-from-dashboard",
+    "title": "Interactive Dashboard",
+    "section": "5 Insights from Dashboard",
+    "text": "5 Insights from Dashboard\n\n5.1 Key Patterns Observable\nGeographic Concentration The map clearly shows which airports serve as primary diversion hubs. Common patterns include: - West Coast: ONT, PHX, LAX, SFO - Texas: IAH, DFW, SAT, AUS - Midwest: IND, STL, MKE - Southeast: ATL, MIA, MCO\nAirline Variation Significant differences exist in diversion frequency by airline, driven by: - Route network size and destinations served - Fleet composition and aircraft types - Operational practices and disruption management - Timing of analysis period (some airlines may have more flights during studied period)\nTemporal Patterns Using the date range filter reveals: - [Seasonal patterns if any] - [Day-of-week effects if present] - [Major disruption events]\n\n\n5.2 Using Dashboard for Decision-Making\nFor Airlines: - Identify routes with highest diversion risk - Plan capacity and staffing for vulnerable airports - Compare performance to competitors\nFor Airports: - Understand diversion traffic patterns - Plan for overflow capacity during peak periods - Coordinate with other regional airports\nFor Researchers: - Explore relationships between variables - Generate hypotheses about disruption causes - Validate findings from other analyses"
+  },
+  {
+    "objectID": "05-dashboard.html#limitations",
+    "href": "05-dashboard.html#limitations",
+    "title": "Interactive Dashboard",
+    "section": "6 Limitations",
+    "text": "6 Limitations\n\nNo causal information: Dashboard shows patterns but not causes\nHistorical data only: Cannot predict future diversions\nAggregated view: Individual flight details not shown\nWeather context missing: No concurrent weather data available\nFirst diversion only: Secondary diversions not tracked"
+  },
+  {
+    "objectID": "05-dashboard.html#future-enhancements",
+    "href": "05-dashboard.html#future-enhancements",
+    "title": "Interactive Dashboard",
+    "section": "7 Future Enhancements",
+    "text": "7 Future Enhancements\nPotential improvements to dashboard:\n\nAdd weather overlay - Show weather conditions during diversion periods\nAnimated time series - Play through months/years to see patterns evolve\nRoute-specific analysis - Filter by origin and destination airports\nDelay correlation - Show relationship between diversion frequency and delays\nPredictive model - Use ML to predict diversion likelihood for future flights\nDownload data - Export filtered dataset as CSV"
+  },
+  {
+    "objectID": "05-dashboard.html#accessing-the-dashboard",
+    "href": "05-dashboard.html#accessing-the-dashboard",
+    "title": "Interactive Dashboard",
+    "section": "8 Accessing the Dashboard",
+    "text": "8 Accessing the Dashboard\n\n8.1 Local Version\nTo run the dashboard locally on your computer:\n# Install dependencies\npip install panel plotly pandas\n\n# Run the dashboard\npanel serve dashboard.py --show\n\n\n8.2 Deployed Version\n[Dashboard URL - Add when deployed to web]"
+  },
+  {
+    "objectID": "05-dashboard.html#questions-support",
+    "href": "05-dashboard.html#questions-support",
+    "title": "Interactive Dashboard",
+    "section": "9 Questions & Support",
+    "text": "9 Questions & Support\nFor questions about: - How to use: See “How to Use” section above - Data interpretation: See “Insights from Dashboard” section - Technical issues: Check that you have latest versions of Panel and Plotly - Analysis questions: See full documentation at [link to main site]\n\nDashboard Created: [DATE] Last Updated: [DATE] Data Current Through: December 2024"
+  },
+  {
+    "objectID": "03-visualization.html",
+    "href": "03-visualization.html",
+    "title": "Visualizations",
+    "section": "",
+    "text": "This section explains the interactive maps created to visualize flight diversion patterns. Each visualization reveals different aspects of how diversions cluster geographically and temporally across the U.S. aviation system.",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#overview",
+    "href": "03-visualization.html#overview",
+    "title": "Visualizations",
+    "section": "",
+    "text": "This section explains the interactive maps created to visualize flight diversion patterns. Each visualization reveals different aspects of how diversions cluster geographically and temporally across the U.S. aviation system.",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#visualization-types",
+    "href": "03-visualization.html#visualization-types",
+    "title": "Visualizations",
+    "section": "2 Visualization Types",
+    "text": "2 Visualization Types\n\n2.1 Individual Cluster Maps (Cascade View)\nShows all diversions for a single destination airport during a specific cluster period.\nWhat it displays: - Blue markers: Origin airports (where flights departed from) - Red stars: Diversion airports (where flights were redirected) - Gold diamonds: Primary destination airport - Curved colored lines: Flight paths, with each color representing a different airline\nHow to interpret: - Density of colored lines = volume of diversions during the event - Clustering of red stars = which airports absorbed most diversions - Geographic spread = how far diversions traveled - Airline colors = which carriers were most affected\n\n\n2.2 System-Wide Maps (Context View)\nShows all diversions system-wide that occurred during a cluster period, revealing the broader impact.\nWhat it displays: - All diversions across U.S. (not just to primary destination) - Same color scheme as cascade maps - Reveals secondary effects and system disruptions\nHow to interpret: - Compares primary cluster impact vs. system-wide impact - Shows whether disruption was localized or system-wide - Reveals which other airports absorbed overflow diversions",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#cluster-1-san-diego-san---december-18-21-2024",
+    "href": "03-visualization.html#cluster-1-san-diego-san---december-18-21-2024",
+    "title": "Visualizations",
+    "section": "3 Cluster 1: San Diego (SAN) - December 18-21, 2024",
+    "text": "3 Cluster 1: San Diego (SAN) - December 18-21, 2024\n\n3.1 Individual Cluster View: SAN Diversions Only\nFile: cascade_cluster_1_SAN.html\nThis map shows the 140 diversions specifically to San Diego International Airport during this 3-day period.\nKey observations: - Most flights originated from California and Arizona - Phoenix Sky Harbor (PHX) was the primary diversion airport (33 diversions) - Ontario International (ONT) also absorbed significant volume (48 diversions) - Primarily West Coast airlines affected - Tight geographic clustering suggests regional weather event or airport capacity issue\nWhat it tells us: When SAN experiences a disruption, nearby California airports (ONT, LAX) are the first alternatives used by airlines, followed by Arizona airports (PHX, PSP).\n\n\n3.2 System-Wide View: All U.S. Diversions During SAN Cluster\nFile: system_wide_cluster_1_SAN.html\nThis map reveals the complete aviation system response during the same period - ALL diversions across the U.S., not just those to SAN.\nKey observations: - 290 total diversions vs. 140 to SAN (48.3% to primary airport) - Other destinations affected: SNA (30), EYW (20), BOS (17), LAX (7) - 60 total destination airports affected (not just SAN) - 73 origin airports involved - Geographically widespread: West Coast, East Coast, and Southeast all impacted - Multiple airlines contributed to the cascade\nWhat it tells us: The SAN disruption had system-wide ripple effects. When one major airport is affected, diversions cascade across the entire network, affecting other cities and regions. This is a true system-wide disruption event, not just a localized issue.\nInterpretation: Only about half of flights heading to SAN were diverted there. The other half were diverted elsewhere, indicating either SAN’s capacity to absorb only part of the demand, or airlines making strategic decisions to distribute diversions across multiple airports.",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#cluster-2-dallasfort-worth-dfw---november-4-5-2024",
+    "href": "03-visualization.html#cluster-2-dallasfort-worth-dfw---november-4-5-2024",
+    "title": "Visualizations",
+    "section": "4 Cluster 2: Dallas/Fort Worth (DFW) - November 4-5, 2024",
+    "text": "4 Cluster 2: Dallas/Fort Worth (DFW) - November 4-5, 2024\n\n4.1 Individual Cluster View: DFW Diversions Only\nFile: cascade_cluster_2_DFW.html\nThis map shows the 110 diversions specifically to Dallas/Fort Worth International Airport during this 2-day period.\nKey observations: - Origins concentrated in Northeast, Southeast, and Midwest - Houston Intercontinental (IAH) was the primary diversion airport (28 diversions) - Regional pattern: Oklahoma City (OKC), San Antonio (SAT), Austin (AUS) also active - Primarily American and Southwest airlines (major DFW hubs) - Texas region tightly clustered\nWhat it tells us: DFW diversions are concentrated within the Texas/South-Central region, with Houston emerging as the backup for Dallas flights.\n\n\n4.2 System-Wide View: All U.S. Diversions During DFW Cluster\nFile: system_wide_cluster_2_DFW.html\nThis map shows all diversions during the same period across the entire U.S.\nKey observations: - 186 total diversions vs. 110 to DFW (59.1% to primary airport) - Secondary destinations: DAL (32), AUS (13), SAT (12) - 40 diversion airports used - 89 origin airports involved - More geographically concentrated than SAN event - Primarily South-Central U.S. (regional event)\nWhat it tells us: This was a more regional event compared to SAN. The disruption impact stayed concentrated in Texas/South-Central region, with 59% of diversions going to the primary airport DFW. Other regional airports absorbed the remaining volume.\nInterpretation: DFW disruptions have less system-wide impact than coastal airport disruptions. The regional nature of this event kept diversions contained within the Texas hub region.",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#cluster-3-chicago-ohare-ord---august-24-26-2021",
+    "href": "03-visualization.html#cluster-3-chicago-ohare-ord---august-24-26-2021",
+    "title": "Visualizations",
+    "section": "5 Cluster 3: Chicago O’Hare (ORD) - August 24-26, 2021",
+    "text": "5 Cluster 3: Chicago O’Hare (ORD) - August 24-26, 2021\n\n5.1 Individual Cluster View: ORD Diversions Only\nFile: cascade_cluster_3_ORD.html\nThis map shows the 108 diversions specifically to Chicago O’Hare International Airport during this 3-day period.\nKey observations: - Origins from across entire U.S.: Southwest, Midwest, Northeast, Southeast - Indianapolis (IND) was the primary diversion airport (24 diversions) - Secondary diversion airports: St. Louis (STL), Milwaukee (MKE) - Midwest corridor heavily utilized - United Airlines dominant (major ORD carrier)\nWhat it tells us: When ORD is unavailable, the Midwest corridor airports (IND, STL, MKE) form a network of alternatives, with IND being the primary choice.\n\n\n5.2 System-Wide View: All U.S. Diversions During ORD Cluster\nFile: system_wide_cluster_3_ORD.html\nThis map shows all diversions during the same period across the entire U.S.\nKey observations: - 187 total diversions vs. 108 to ORD (57.8% to primary airport) - Secondary destinations: MCO (19), MDW (14), STL (9) - 51 diversion airports used - 87 origin airports involved - Similar to DFW in concentration (regional event) - Midwest and surrounding regions primarily affected\nWhat it tells us: ORD disruptions have moderate system-wide impact - less than coastal airports but more geographically spread than DFW. The Midwest location means disruptions don’t cascade to both coasts, but do affect a broad Midwest-to-Southeast corridor.\nInterpretation: Hub airport disruptions vary in system-wide impact based on geography. Central hubs like ORD and DFW have more contained impacts, while coastal hubs like SAN have broader ripple effects.",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#key-insights-from-visualizations",
+    "href": "03-visualization.html#key-insights-from-visualizations",
+    "title": "Visualizations",
+    "section": "6 Key Insights from Visualizations",
+    "text": "6 Key Insights from Visualizations\n\n6.1 Pattern 1: Geographic Clustering of Diversions\nDiversions concentrate in specific regional hubs rather than spreading randomly: - West Coast: ONT, PHX, LAX, SFO - South-Central: IAH, DFW, SAT, AUS - Midwest: IND, STL, MKE\n\n\n6.2 Pattern 2: System-Wide vs. Regional Events\n\nSAN (coastal, major hub): 48.3% to primary airport, 60 destinations affected (system-wide)\nDFW (regional hub): 59.1% to primary airport, 17 destinations affected (regional)\nORD (central hub): 57.8% to primary airport, 32 destinations affected (regional-to-moderate)\n\n\n\n6.3 Pattern 3: Airline-Specific Patterns\nColors on maps reveal airline-specific routing: - Major airlines (AA, DL, UA, SW) dominate specific hubs - Each airline has preferred diversion airports - Enables prediction of diversion destinations based on carrier\n\n\n6.4 Pattern 4: Cascading Effects\nWhen primary destination unavailable: 1. Flights divert to nearest appropriate airport 2. Overflow spills to secondary airports 3. Eventually reaches tertiary alternatives if needed 4. Creates geographic ripple effect through network",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#how-to-use-these-visualizations",
+    "href": "03-visualization.html#how-to-use-these-visualizations",
+    "title": "Visualizations",
+    "section": "7 How to Use These Visualizations",
+    "text": "7 How to Use These Visualizations\n\n7.1 For Operational Planning\n\nAirlines: Identify which airports to pre-position aircraft at for disruption management\nAirports: Anticipate diversion volume during disruption events\nATC: Prepare to route traffic to alternative airports\n\n\n\n7.2 For Understanding System Resilience\n\nNotice which airports absorb diversions (IND, IAH, ONT, etc.)\nIdentify bottlenecks where diversions cannot be easily accommodated\nReveal geographic redundancy in the network\n\n\n\n7.3 For Identifying Root Causes\n\nTemporal clustering (all within 12 hours) suggests single root cause\nGeographic concentration suggests capacity or weather issue\nAirline-specific patterns visible in colored lines",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#limitations-of-visualizations",
+    "href": "03-visualization.html#limitations-of-visualizations",
+    "title": "Visualizations",
+    "section": "8 Limitations of Visualizations",
+    "text": "8 Limitations of Visualizations\n\nFirst diversion only: Maps don’t show secondary or tertiary diversions\nNo causal data: Cannot determine weather, mechanical, or ATC reasons\nAggregated view: Individual flight details hidden\nHistorical only: Past patterns don’t guarantee future outcomes\nMercator projection: Distorts distances, especially at high latitudes",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "03-visualization.html#technical-details",
+    "href": "03-visualization.html#technical-details",
+    "title": "Visualizations",
+    "section": "9 Technical Details",
+    "text": "9 Technical Details\n\n9.1 Visualization Tools\n\nFramework: Plotly (interactive web maps)\nData: BTS OTMC-OTP flight records\nCoordinate System: WGS84 (latitude/longitude)\nProjection: Mercator (standard web maps)\n\n\n\n9.2 Map Features\n\nInteractivity: Hover for details, zoom/pan navigation\nExport: Download as PNG image using Plotly tools\nColors: Assigned by airline for pattern recognition\n\n\n\n9.3 Bezier Curves\nFlight paths use quadratic Bezier curves rather than straight lines because: - Straight lines overlap and become illegible - Curved paths separate overlapping routes visually - Curves approximate great-circle routes on Mercator projection\n\nVisualizations Created: [DATE] Data Period: July 2021 - December 2024 Clusters Visualized: 3 major diversion events Total Maps: 6 (3 cascade + 3 system-wide)",
+    "crumbs": [
+      "Data Collection",
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html",
+    "href": "02-analysis.html",
+    "title": "Analysis Methodology",
+    "section": "",
+    "text": "This section describes the analytical methods used to identify and understand flight diversion patterns. The analysis combines temporal clustering, geospatial analysis, and statistical methods to uncover meaningful patterns in U.S. aviation system disruptions.",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#overview",
+    "href": "02-analysis.html#overview",
+    "title": "Analysis Methodology",
+    "section": "",
+    "text": "This section describes the analytical methods used to identify and understand flight diversion patterns. The analysis combines temporal clustering, geospatial analysis, and statistical methods to uncover meaningful patterns in U.S. aviation system disruptions.",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#analysis-objectives",
+    "href": "02-analysis.html#analysis-objectives",
+    "title": "Analysis Methodology",
+    "section": "2 Analysis Objectives",
+    "text": "2 Analysis Objectives\nThe analysis aimed to answer the following questions:\n\nWhen do diversions cluster? Are there specific time periods with elevated diversion activity around particular airports?\nWhich airports are most affected? What are the primary diversion hubs and destination airports impacted?\nWhat characterizes diversion events? Are clusters regional (concentrated in one area) or system-wide (affecting multiple regions)?\nHow do diversions vary by airline and route? Do certain airlines or routes experience more frequent diversions?",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#methodology",
+    "href": "02-analysis.html#methodology",
+    "title": "Analysis Methodology",
+    "section": "3 Methodology",
+    "text": "3 Methodology\n\n3.1 1. Temporal-Spatial Clustering Analysis\n\n3.1.1 Methodology: Time-Based Clustering\nA temporal clustering approach was used to identify distinct diversion events. Diversions are grouped by destination airport and time proximity, with the assumption that diversions occurring within a 12-hour window at the same destination airport are part of the same disruption event.\nClustering Algorithm:\n# Define temporal cluster: if time gap between diversions &gt; 12 hours, start new cluster\ndef dest_cluster(group, max_gap_hours=12):\n    group = group.sort_values('FlightDate')\n    group['time_since_last'] = group['FlightDate'].diff().dt.total_seconds() / 3600\n    group['new_cluster'] = (group['time_since_last'] &gt; max_gap_hours).fillna(True)\n    group['cluster_id'] = group['new_cluster'].cumsum()\n    return group\n\n# Apply clustering by destination\ndiverted_by_dest = diverted_by_dest.groupby('Dest', group_keys=False).apply(dest_cluster)\n\n# Aggregate cluster statistics\ncluster_summary_by_dest = diverted_by_dest.groupby(['Dest', 'cluster_id']).agg({\n    'FlightDate': ['min', 'max', 'count'],\n    'Origin': 'nunique',\n    'Div1Airport': lambda x: x.value_counts().index[0] if len(x) &gt; 0 else None\n})\nWhy this approach? - Temporal proximity (within 12 hours) indicates related disruptions at the same destination - Groups diversions by destination to identify which airports experience clustered events - Simple and interpretable: clusters represent real disruption events - Computationally efficient for large datasets\n\n\n3.1.2 Determining Cluster Significance\nThe 12-hour threshold was chosen because: - Allows for cascading effects (e.g., weather system lasting multiple hours) - Prevents false clustering of unrelated events days apart - Aligns with typical airline operational recovery timelines\nClusters with 50+ diversions were identified as major events warranting detailed analysis.\n\n\n3.1.3 Cluster Characteristics\nCluster 1: San Diego (SAN) System-Wide Disruption - Primary destination: SAN (San Diego International) - Common diversion airport: PHX (Phoenix Sky Harbor International) - Number of events: 140 diversions to SAN; 290 system-wide diversions - Time period: December 18-21, 2024 - Origins affected: 43 unique airports, with ATL, SFO, and DEN being most common - Characteristics: Widespread multi-airport event affecting 60 destination airports and 73 origin airports. Only 48.3% of diversions were to SAN itself; the remaining 150 diversions spread across other destinations (SNA, EYW, BOS, LAX, etc.), indicating a system-wide disruption cascade. Primary diversion airports were ONT (48), PHX (33), and LAX (32), suggesting West Coast capacity constraints.\nCluster 2: Dallas/Fort Worth (DFW) Regional Disruption - Primary destination: DFW (Dallas/Fort Worth International) - Common diversion airport: IAH (George Bush Intercontinental, Houston) - Number of events: 110 diversions to DFW; 186 system-wide diversions - Time period: November 4-5, 2024 - Origins affected: 89 unique airports, with ATL, CLT, and BOS being most common - Characteristics: Regional event concentrated in Texas area with 59.1% of diversions directed to DFW. Secondary impacts on DAL (32), AUS (13), and SAT (12). Primary diversion airports clustered in Texas region: IAH (28), OKC (22), SAT (16), and AUS (11). Despite broad geographic origins, diversion pattern remained relatively localized to South-Central U.S.\nCluster 3: Chicago O’Hare (ORD) Regional Disruption - Primary destination: ORD (Chicago O’Hare International) - Common diversion airport: IND (Indianapolis International) - Number of events: 108 diversions to ORD; 187 system-wide diversions - Time period: August 24-26, 2021 - Origins affected: 87 unique airports, with ORD, LAX, DFW, and MSP being most common - Characteristics: Regional event affecting Midwest with 57.8% of diversions to ORD. Secondary impacts on MCO (19), MDW (14), and STL (9). Primary diversion airports: IND (24), STL (21), and MKE (17), indicating Midwest corridor used for overflow capacity. Despite broad geographic origins, diversions concentrated around ORD and neighboring Midwest airports.\n\n\n\n\n3.2 2. Geospatial Analysis\n\n3.2.1 Airport-Level Analysis\nAirport coordinates were used to create geographic visualizations and identify spatial patterns:\n# Get airport coordinates\ndef get_coords(airport_code, airport_df):\n    if airport_code in airport_df.index:\n        coords = airport_df.loc[airport_code]\n        return (coords['latitude'], coords['longitude'])\n    return (None, None)\n\n# Create flight paths using Bezier curves\ndef create_bezier_curve(lat1, lon1, lat2, lon2, num_points=100):\n    mid_lat = (lat1 + lat2) / 2\n    mid_lon = (lon1 + lon2) / 2\n    dx = lon2 - lon1\n    dy = lat2 - lat1\n    distance = np.sqrt(dx**2 + dy**2)\n    \n    # Calculate control point for Bezier curve\n    if distance &gt; 0:\n        offset = distance * 0.2\n        control_lat = mid_lat + offset * (dx / distance) * 0.15\n        control_lon = mid_lon - offset * (dy / distance) * 0.15\n    else:\n        control_lat = mid_lat\n        control_lon = mid_lon\n    \n    # Generate curve points\n    t = np.linspace(0, 1, num_points)\n    lats = [(1-ti)**2 * lat1 + 2*(1-ti)*ti * control_lat + ti**2 * lat2 for ti in t]\n    lons = [(1-ti)**2 * lon1 + 2*(1-ti)*ti * control_lon + ti**2 * lon2 for ti in t]\n    return lats, lons\n\n# Count diversions by airport\ndiv_counts = diverted_flights['Div1Airport'].value_counts()\ndest_counts = diverted_flights['Dest'].value_counts()\n\n\n3.2.2 Route Analysis\nFlight routes (Origin → Diversion → Destination) were visualized using interactive Plotly maps showing: - Blue markers: Origin airports - Red stars: Diversion airports - Gold diamonds: Intended destination airports - Curved lines: Flight paths colored by airline\nThis reveals: - Which airports are forced to absorb diversions - Geographic spread of disruption impacts - Airline-specific diversion patterns - Cascading effects across regions\n\n\n\n\n3.3 3. Statistical Analysis\n\n3.3.1 Delay Impact\nDeparture and arrival delays for diverted flights were calculated to understand operational impact:\n# Calculate delay statistics\navg_dep_delay = diverted_flights['DepDelay'].mean()\nmedian_dep_delay = diverted_flights['DepDelay'].median()\nmax_dep_delay = diverted_flights['DepDelay'].max()\n\navg_arr_delay = diverted_flights['ArrDelay'].mean()\nmedian_arr_delay = diverted_flights['ArrDelay'].median()\nmax_arr_delay = diverted_flights['ArrDelay'].max()\nKey Statistics: - Average departure delay for diverted flights: [X] minutes - Average arrival delay for diverted flights: [Y] minutes - Maximum single-flight delay: [Z] minutes\n\n\n3.3.2 Airline Comparison\nDiversions were analyzed by airline to identify operational differences:\n# Analyze diversions by airline\nairline_analysis = diverted_flights.groupby('Marketing_Airline_Network').agg({\n    'FlightDate': 'count',\n    'Div1Airport': 'nunique',\n    'DepDelay': 'mean',\n    'ArrDelay': 'mean'\n}).rename(columns={'FlightDate': 'num_diversions'})\n\nairline_analysis = airline_analysis.sort_values('num_diversions', ascending=False)\n\n\n\nAirline\nDiversion Count\nAvg Dep Delay\nAvg Arr Delay\n\n\n\n\n[Airline 1]\n[X]\n[A] min\n[B] min\n\n\n[Airline 2]\n[Y]\n[C] min\n[D] min\n\n\n[Airline 3]\n[Z]\n[E] min\n[F] min",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#what-this-analysis-tells-us",
+    "href": "02-analysis.html#what-this-analysis-tells-us",
+    "title": "Analysis Methodology",
+    "section": "4 What This Analysis Tells Us",
+    "text": "4 What This Analysis Tells Us\n\n4.1 About Diversion Clustering\nThe 12-hour temporal clustering reveals that: - Diversions are not random; they cluster around specific destinations during narrow time windows - Multiple diversions within 12 hours suggest shared root causes (weather, capacity, ATC issues) - Cluster size indicates disruption severity\n\n\n4.2 About Geographic Patterns\nThe geographic visualizations show: - Certain airports (PHX, IAH, IND) repeatedly serve as diversion hubs - System-wide vs. regional events have different impacts - West Coast, Texas, and Midwest emerge as diversion hotspots\n\n\n4.3 About Operational Impact\nThe delay analysis demonstrates: - Diversions cause significant departure delays [X] minutes on average - Arrival delays compound, affecting downstream flights - Cascading effects spread disruptions through the network\n\n\n4.4 About Airline Differences\nAirline comparison reveals: - Variation in diversion frequency by carrier - May reflect route network, fleet size, or operational practices - Some airlines absorb diversions more efficiently than others",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#analysis-limitations",
+    "href": "02-analysis.html#analysis-limitations",
+    "title": "Analysis Methodology",
+    "section": "5 Analysis Limitations",
+    "text": "5 Analysis Limitations\n\nNo causal information: Analysis shows patterns but not root causes (weather, mechanical, ATC)\nFirst diversion only: Secondary diversions not tracked; cascade effects underestimated\nNo weather context: Cannot verify weather-related diversion hypothesis\nHistorical data only: Cannot predict future diversions\nAirline bias: Different airlines may report data inconsistently",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#methodological-decisions",
+    "href": "02-analysis.html#methodological-decisions",
+    "title": "Analysis Methodology",
+    "section": "6 Methodological Decisions",
+    "text": "6 Methodological Decisions\n\n6.1 Why Temporal Clustering with 12-Hour Threshold?\nThe approach was chosen because: 1. Interpretability: Clusters directly represent real disruption events 2. Domain alignment: 12-hour window matches airline operational recovery cycles 3. Simplicity: Easy to understand and reproduce 4. Efficiency: Computationally efficient for large datasets 5. Causality: Temporal proximity suggests shared root causes\n\n\n6.2 Why Group by Destination?\nGrouping by destination airport reveals: - Which airports are most vulnerable to cascading diversions - Geographic concentration vs. system-wide impact - Capacity constraints at specific locations - Ripple effects when one airport is overwhelmed\n\n\n6.3 Why Visualize with Bezier Curves?\nBezier curves were used for flight paths because: - Great circle routes are difficult to visualize at Mercator projection - Curved paths make overlapping routes distinguishable - Color-coding by airline reveals carrier-specific patterns - Interactive Plotly maps allow exploration of detailed routes\n\n\n6.4 Assumptions Made\n\nTemporal assumption: Diversions within 12 hours are part of same event\nDestination assumption: Diversions to same destination within time window are related\nIndependence: Clusters separated by &gt;12 hours are treated as independent events",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#code-availability",
+    "href": "02-analysis.html#code-availability",
+    "title": "Analysis Methodology",
+    "section": "7 Code Availability",
+    "text": "7 Code Availability\nAll analysis code is available in the Jupyter notebook: 5500_flightDiversion.ipynb",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "02-analysis.html#next-steps-in-analysis",
+    "href": "02-analysis.html#next-steps-in-analysis",
+    "title": "Analysis Methodology",
+    "section": "8 Next Steps in Analysis",
+    "text": "8 Next Steps in Analysis\nPotential extensions to this analysis:\n\nIncorporate weather data - Join with NOAA weather to verify weather-related diversions\nTrack cascading effects - Follow secondary diversions through the network\nPredict diversion risk - Build ML model to predict diversion likelihood\nEconomic impact - Quantify costs of diversions to airlines and passengers\nSentiment analysis - Analyze passenger reactions on social media during events\n\n\nAnalysis Completed: [DATE]",
+    "crumbs": [
+      "Data Collection",
+      "Analysis Methodology"
+    ]
+  },
+  {
+    "objectID": "01-collection.html",
+    "href": "01-collection.html",
+    "title": "Data Collection & Preparation",
+    "section": "",
+    "text": "This section documents how flight diversion data was collected, processed, and prepared for analysis. Understanding the data pipeline is crucial for interpreting the results and understanding the limitations of this analysis.",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#overview",
+    "href": "01-collection.html#overview",
+    "title": "Data Collection & Preparation",
+    "section": "",
+    "text": "This section documents how flight diversion data was collected, processed, and prepared for analysis. Understanding the data pipeline is crucial for interpreting the results and understanding the limitations of this analysis.",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-sources",
+    "href": "01-collection.html#data-sources",
+    "title": "Data Collection & Preparation",
+    "section": "2 Data Sources",
+    "text": "2 Data Sources\n\n2.1 Primary Source: BTS OTMC-OTP Database\nSource: U.S. Bureau of Transportation Statistics Portal: https://www.transtats.bts.gov/ Database: OTMC-OTP (Operations Time Series - On-Time Performance)\nThe BTS provides monthly CSV files containing detailed flight operation statistics for all U.S. carriers operating passenger services. Each file includes:\n\nFlight identifiers (carrier, flight number, date)\nOrigin and destination airports\nScheduled, actual, and diverted times\nDelay information\nDiversion airport information\n\nCoverage: July 2021 - December 2024 (42 months) Records: 25,386,632 total flight records Diversions Identified: 64,816 diverted flights\n\n\n2.2 Secondary Source: Airport Coordinates\nSource: Federal Aviation Administration & OpenFlights Database Portal: https://www.faa.gov/ and https://openflights.org/ Data: Airport geographic coordinates (latitude/longitude)\nGeographic data for U.S. airports was obtained to enable spatial analysis and visualization. Each airport is represented by its IATA code (3-letter code) and geographic coordinates.\nCoverage: 408 airports across the United States Accuracy: Latitude/longitude to seconds precision —",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-download-process",
+    "href": "01-collection.html#data-download-process",
+    "title": "Data Collection & Preparation",
+    "section": "3 Data Download Process",
+    "text": "3 Data Download Process\n\n3.1 Steps to Reproduce Data Collection\nThe BTS data can be downloaded manually or via programmatic access:\n\n3.1.1 Manual Download (Current Process)\n\nVisit https://www.transtats.bts.gov/\nNavigate to the “Downloads” section\nSelect “OTMC-OTP” database\nDownload monthly CSV files\nStore in a /data directory\n\n\n\n3.1.2 Programmatic Approach (Future Enhancement)\n# Example: Automating BTS data download\nimport requests\nimport pandas as pd\n\n# The BTS API documentation would go here\n# This is a template for how to automate collection",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-structure",
+    "href": "01-collection.html#data-structure",
+    "title": "Data Collection & Preparation",
+    "section": "4 Data Structure",
+    "text": "4 Data Structure\n\n4.1 Key Variables in Raw Data\n\n\n\n\n\n\n\n\n\nColumn\nDescription\nType\nNotes\n\n\n\n\nFlightDate\nDate of flight departure\nDate\nOriginal scheduled date\n\n\nReporting_Airline\nIATA code of reporting airline\nString\n2-3 letter code\n\n\nMarketing_Airline_Network\nAirline name\nString\nFull airline name\n\n\nOrigin\nOrigin airport IATA code\nString\n3-letter code\n\n\nDest\nIntended destination IATA code\nString\n3-letter code\n\n\nDepTime\nScheduled departure time\nInteger\nHHMM format\n\n\nActualDepTime\nActual departure time\nInteger\nHHMM format\n\n\nDepDelay\nDeparture delay in minutes\nFloat\nNegative = early, Positive = late\n\n\nDiv1Airport\nFirst diversion airport\nString\nIf diverted\n\n\nDuplicate\nRecord duplicate flag\nString\nY/N\n\n\n\n\n\n4.2 Example Data Row\nFlightDate: 2023-07-15\nMarketing_Airline_Network: American Airlines\nOrigin: LAX\nDest: JFK\nDiv1Airport: ORD\nDepDelay: 45\nDepTime: 1430\nActualDepTime: 1515",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-cleaning-pipeline",
+    "href": "01-collection.html#data-cleaning-pipeline",
+    "title": "Data Collection & Preparation",
+    "section": "5 Data Cleaning Pipeline",
+    "text": "5 Data Cleaning Pipeline\n\n5.1 Step 1: File Consolidation\nMultiple monthly CSV files were combined into a single dataset:\nimport pandas as pd\nimport glob\n\n# List all flight data files (2021-07 to 2024-12)\nfile_list = sorted(glob.glob('data/*_OTMC_OTP.csv')) \n\n# Verify all files have consistent column names\ncolumns_set = []\nfor file in file_list:\n    df = pd.read_csv(file, nrows=0)  \n    columns_set.append(set(df.columns))\n\n# Combine files\nflights_list = [pd.read_csv(f) for f in file_list]\nflights = pd.concat(flights_list, ignore_index=True)\nResult: 42 monthly files successfully consolidated into single DataFrame Total Records: 25,386,632 flight records\n\n\n\n5.2 Step 2: Diversion Identification\nNot all flights in the dataset represent diversions. A flight is considered “diverted” when:\n\nThe flight has a recorded Div1Airport value\nThe Div1Airport is different from the Dest (intended destination)\nThe flight was not marked as duplicate\n\n# Filter diverted flights only\ndiverted_flights = flights[\n    (flights['Div1Airport'].notna() & \n     (flights['Div1Airport'] != flights['Dest']))\n].copy()\n\n# Remove duplicates\ndiverted_flights = diverted_flights.drop(\n    diverted_flights[diverted_flights['Duplicate'] == 'Y'].index\n)\nResult: [Y] diverted flights identified Filtering Ratio: ~[Z]% of all flights were diverted\n\n\n\n5.3 Step 3: Missing Data Handling\nEmpty Columns Removed: - Columns with 100% missing values were dropped - Reduced dimensionality for cleaner analysis\nTime Data Cleaning: - FlightDate converted to datetime format - Missing departure times handled (indicates cancelled flights) - Departure delays filled with 0 where missing\n# Drop empty columns\nempty_columns = diverted_flights.columns[diverted_flights.isna().all()]\ndiverted_flights = diverted_flights.dropna(axis=1, how='all')\n\n# Handle time data\ndiverted_flights['FlightDate'] = pd.to_datetime(\n    diverted_flights['FlightDate'], \n    errors='coerce'\n)\n\n\n\n5.4 Step 4: Feature Engineering\nActual Departure DateTime\nThe scheduled departure time was converted to actual departure time using:\ndiverted_flights['ActualDep'] = (\n    diverted_flights['FlightDate'] +\n    pd.to_timedelta(diverted_flights['DepTime'] // 100, unit='h') +\n    pd.to_timedelta(diverted_flights['DepTime'] % 100, unit='m') +\n    pd.to_timedelta(diverted_flights['DepDelay'], unit='m')\n)\n\ndiverted_flights['ActualDepDate'] = diverted_flights['ActualDep'].dt.date\ndiverted_flights['ActualDepTime'] = diverted_flights['ActualDep'].dt.time\nThis engineering captures the true departure date (which may differ from scheduled date when flights depart late the previous day).",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-quality-assessment",
+    "href": "01-collection.html#data-quality-assessment",
+    "title": "Data Collection & Preparation",
+    "section": "6 Data Quality Assessment",
+    "text": "6 Data Quality Assessment\n\n6.1 Data Completeness\n\nTotal Diversion Records: 64,816\nRecords with Complete Coordinates: 100% (after geocoding)\nRecords with Airlines: 100%\n\n\n\n6.2 Data Consistency Checks\n✅ Passed: - All airports are valid IATA codes - Delay values are numeric and reasonable - Dates are in valid range (2021-07 to 2024-12) - Carrier codes are consistent with FAA registry\n⚠️ Warnings: - Some records have missing airport coordinates (handled by geocoding)",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#airport-geocoding",
+    "href": "01-collection.html#airport-geocoding",
+    "title": "Data Collection & Preparation",
+    "section": "7 Airport Geocoding",
+    "text": "7 Airport Geocoding\nTo enable geographic analysis, airports were geocoded with latitude/longitude:\n\n7.1 Airport Coordinates Source\nAirport coordinates were obtained from the Federal Aviation Administration and OpenFlights Database: - IATA airport codes matched to latitude/longitude coordinates - 408 U.S. airports successfully geocoded - Coordinates precise to seconds (approximately ±30 meters)\n# Example geocoding\nairports_data = pd.read_csv('airport_coordinates.csv')\nairports_clean = airports_data.set_index('IATA_Code')[['latitude', 'longitude']]\n\ndef get_coords(airport_code, airport_df):\n    if airport_code in airport_df.index:\n        coords = airport_df.loc[airport_code]\n        return (coords['latitude'], coords['longitude'])\n    return (None, None)\n\n# Apply to flight data\ndiverted_flights['origin_lat'] = diverted_flights['Origin'].apply(\n    lambda x: get_coords(x, airports_clean)[0]\n)\ndiverted_flights['origin_lon'] = diverted_flights['Origin'].apply(\n    lambda x: get_coords(x, airports_clean)[1]\n)\nGeocoding Success Rate: 99.75%",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-limitations",
+    "href": "01-collection.html#data-limitations",
+    "title": "Data Collection & Preparation",
+    "section": "8 Data Limitations",
+    "text": "8 Data Limitations\n\n8.1 Known Limitations\n\nU.S. Domestic Only: Analysis limited to U.S. domestic flights; international diversions excluded\nCarrier Reporting: Data depends on airline reporting accuracy\nWeather Data Not Included: The current dataset does not include concurrent weather conditions\nSecondary Diversions: Only first diversion recorded; subsequent diversions not tracked\nSeasonality: Dataset spans multiple years but seasonal patterns may be confounded with operational changes\n\n\n\n8.2 Missing Information\n\nWeather conditions at time of diversion\nReason for diversion (weather, mechanical, ATC, etc.)\nPassenger impact (number of passengers affected)\nFinancial impact to airlines",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-processing-summary",
+    "href": "01-collection.html#data-processing-summary",
+    "title": "Data Collection & Preparation",
+    "section": "9 Data Processing Summary",
+    "text": "9 Data Processing Summary\n\n\n\n\n\n\n\n\n\n\nStage\nRecords In\nRecords Out\n% Retained\nNotes\n\n\n\n\nRaw Data\n[X]\n-\n-\nConsolidated from 45 monthly files\n\n\nFilter Diversions\n[X]\n[Y]\n[Z]%\nRemoved non-diverted flights\n\n\nRemove Duplicates\n[Y]\n[Y2]\n[Z2]%\nBTS-marked duplicates removed\n\n\nGeocoding\n[Y2]\n[Y3]\n[Z3]%\nAirports successfully geocoded\n\n\nFinal Dataset\n-\n[Y3]\n[%]\nReady for analysis",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#reproducibility",
+    "href": "01-collection.html#reproducibility",
+    "title": "Data Collection & Preparation",
+    "section": "10 Reproducibility",
+    "text": "10 Reproducibility\nTo reproduce this data collection process:\n\nDownload BTS data from: https://www.transtats.bts.gov/\nPlace monthly CSV files in /data directory\nRun data cleaning script: notebooks/01-data-cleaning.ipynb\nVerify output: diverted_flights.csv should contain [Y3] records\n\n\n10.1 Environment\npython: 3.13.5\npandas: [VERSION]\ngeopandas: [VERSION]\nnumpy: [VERSION]",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#next-steps",
+    "href": "01-collection.html#next-steps",
+    "title": "Data Collection & Preparation",
+    "section": "11 Next Steps",
+    "text": "11 Next Steps\nAfter collection and cleaning, the data was ready for:\n\nExploratory Analysis - Understanding distribution and patterns\nTemporal Analysis - Identifying clusters and trends over time\nGeospatial Analysis - Mapping diversions and routes\nClustering - Finding patterns in diversion events\n\nSee the Analysis section for details on methodology.",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  },
+  {
+    "objectID": "01-collection.html#data-references",
+    "href": "01-collection.html#data-references",
+    "title": "Data Collection & Preparation",
+    "section": "12 Data References",
+    "text": "12 Data References\n\nBureau of Transportation Statistics (BTS): https://www.transtats.bts.gov/\nFAA Airport Data: https://www.faa.gov/\n[Any other sources cited]\n\n\nData Collection Date: [DATE] Last Updated: [DATE]",
+    "crumbs": [
+      "Data Collection",
+      "Data Collection & Preparation"
+    ]
+  }
+]

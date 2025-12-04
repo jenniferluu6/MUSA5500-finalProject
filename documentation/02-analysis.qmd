@@ -1,0 +1,290 @@
+---
+title: "Analysis Methodology"
+---
+
+## Overview
+
+This section describes the analytical methods used to identify and understand flight diversion patterns. The analysis combines temporal clustering, geospatial analysis, and statistical methods to uncover meaningful patterns in U.S. aviation system disruptions.
+
+---
+
+## Analysis Objectives
+
+The analysis aimed to answer the following questions:
+
+1. **When do diversions cluster?** Are there specific time periods with elevated diversion activity around particular airports?
+2. **Which airports are most affected?** What are the primary diversion hubs and destination airports impacted?
+3. **What characterizes diversion events?** Are clusters regional (concentrated in one area) or system-wide (affecting multiple regions)?
+4. **How do diversions vary by airline and route?** Do certain airlines or routes experience more frequent diversions?
+
+---
+
+## Methodology
+
+### 1. Temporal-Spatial Clustering Analysis
+
+#### Methodology: Time-Based Clustering
+
+A temporal clustering approach was used to identify distinct diversion events. Diversions are grouped by destination airport and time proximity, with the assumption that diversions occurring within a 12-hour window at the same destination airport are part of the same disruption event.
+
+**Clustering Algorithm**:
+
+```python
+# Define temporal cluster: if time gap between diversions > 12 hours, start new cluster
+def dest_cluster(group, max_gap_hours=12):
+    group = group.sort_values('FlightDate')
+    group['time_since_last'] = group['FlightDate'].diff().dt.total_seconds() / 3600
+    group['new_cluster'] = (group['time_since_last'] > max_gap_hours).fillna(True)
+    group['cluster_id'] = group['new_cluster'].cumsum()
+    return group
+
+# Apply clustering by destination
+diverted_by_dest = diverted_by_dest.groupby('Dest', group_keys=False).apply(dest_cluster)
+
+# Aggregate cluster statistics
+cluster_summary_by_dest = diverted_by_dest.groupby(['Dest', 'cluster_id']).agg({
+    'FlightDate': ['min', 'max', 'count'],
+    'Origin': 'nunique',
+    'Div1Airport': lambda x: x.value_counts().index[0] if len(x) > 0 else None
+})
+```
+
+**Why this approach?**
+- Temporal proximity (within 12 hours) indicates related disruptions at the same destination
+- Groups diversions by destination to identify which airports experience clustered events
+- Simple and interpretable: clusters represent real disruption events
+- Computationally efficient for large datasets
+
+#### Determining Cluster Significance
+
+The 12-hour threshold was chosen because:
+- Allows for cascading effects (e.g., weather system lasting multiple hours)
+- Prevents false clustering of unrelated events days apart
+- Aligns with typical airline operational recovery timelines
+
+Clusters with 50+ diversions were identified as major events warranting detailed analysis.
+
+#### Cluster Characteristics
+
+**Cluster 1: San Diego (SAN) System-Wide Disruption**
+- Primary destination: SAN (San Diego International)
+- Common diversion airport: PHX (Phoenix Sky Harbor International)
+- Number of events: 140 diversions to SAN; 290 system-wide diversions
+- Time period: December 18-21, 2024
+- Origins affected: 43 unique airports, with ATL, SFO, and DEN being most common
+- Characteristics: Widespread multi-airport event affecting 60 destination airports and 73 origin airports. Only 48.3% of diversions were to SAN itself; the remaining 150 diversions spread across other destinations (SNA, EYW, BOS, LAX, etc.), indicating a system-wide disruption cascade. Primary diversion airports were ONT (48), PHX (33), and LAX (32), suggesting West Coast capacity constraints.
+
+**Cluster 2: Dallas/Fort Worth (DFW) Regional Disruption**
+- Primary destination: DFW (Dallas/Fort Worth International)
+- Common diversion airport: IAH (George Bush Intercontinental, Houston)
+- Number of events: 110 diversions to DFW; 186 system-wide diversions
+- Time period: November 4-5, 2024
+- Origins affected: 89 unique airports, with ATL, CLT, and BOS being most common
+- Characteristics: Regional event concentrated in Texas area with 59.1% of diversions directed to DFW. Secondary impacts on DAL (32), AUS (13), and SAT (12). Primary diversion airports clustered in Texas region: IAH (28), OKC (22), SAT (16), and AUS (11). Despite broad geographic origins, diversion pattern remained relatively localized to South-Central U.S.
+
+**Cluster 3: Chicago O'Hare (ORD) Regional Disruption**
+- Primary destination: ORD (Chicago O'Hare International)
+- Common diversion airport: IND (Indianapolis International)
+- Number of events: 108 diversions to ORD; 187 system-wide diversions
+- Time period: August 24-26, 2021
+- Origins affected: 87 unique airports, with ORD, LAX, DFW, and MSP being most common
+- Characteristics: Regional event affecting Midwest with 57.8% of diversions to ORD. Secondary impacts on MCO (19), MDW (14), and STL (9). Primary diversion airports: IND (24), STL (21), and MKE (17), indicating Midwest corridor used for overflow capacity. Despite broad geographic origins, diversions concentrated around ORD and neighboring Midwest airports.
+
+---
+
+### 2. Geospatial Analysis
+
+#### Airport-Level Analysis
+
+Airport coordinates were used to create geographic visualizations and identify spatial patterns:
+
+```python
+# Get airport coordinates
+def get_coords(airport_code, airport_df):
+    if airport_code in airport_df.index:
+        coords = airport_df.loc[airport_code]
+        return (coords['latitude'], coords['longitude'])
+    return (None, None)
+
+# Create flight paths using Bezier curves
+def create_bezier_curve(lat1, lon1, lat2, lon2, num_points=100):
+    mid_lat = (lat1 + lat2) / 2
+    mid_lon = (lon1 + lon2) / 2
+    dx = lon2 - lon1
+    dy = lat2 - lat1
+    distance = np.sqrt(dx**2 + dy**2)
+    
+    # Calculate control point for Bezier curve
+    if distance > 0:
+        offset = distance * 0.2
+        control_lat = mid_lat + offset * (dx / distance) * 0.15
+        control_lon = mid_lon - offset * (dy / distance) * 0.15
+    else:
+        control_lat = mid_lat
+        control_lon = mid_lon
+    
+    # Generate curve points
+    t = np.linspace(0, 1, num_points)
+    lats = [(1-ti)**2 * lat1 + 2*(1-ti)*ti * control_lat + ti**2 * lat2 for ti in t]
+    lons = [(1-ti)**2 * lon1 + 2*(1-ti)*ti * control_lon + ti**2 * lon2 for ti in t]
+    return lats, lons
+
+# Count diversions by airport
+div_counts = diverted_flights['Div1Airport'].value_counts()
+dest_counts = diverted_flights['Dest'].value_counts()
+```
+
+#### Route Analysis
+
+Flight routes (Origin → Diversion → Destination) were visualized using interactive Plotly maps showing:
+- Blue markers: Origin airports
+- Red stars: Diversion airports
+- Gold diamonds: Intended destination airports
+- Curved lines: Flight paths colored by airline
+
+This reveals:
+- Which airports are forced to absorb diversions
+- Geographic spread of disruption impacts
+- Airline-specific diversion patterns
+- Cascading effects across regions
+
+---
+
+### 3. Statistical Analysis
+
+#### Delay Impact
+
+Departure and arrival delays for diverted flights were calculated to understand operational impact:
+
+```python
+# Calculate delay statistics
+avg_dep_delay = diverted_flights['DepDelay'].mean()
+median_dep_delay = diverted_flights['DepDelay'].median()
+max_dep_delay = diverted_flights['DepDelay'].max()
+
+avg_arr_delay = diverted_flights['ArrDelay'].mean()
+median_arr_delay = diverted_flights['ArrDelay'].median()
+max_arr_delay = diverted_flights['ArrDelay'].max()
+```
+
+**Key Statistics**:
+- Average departure delay for diverted flights: [X] minutes
+- Average arrival delay for diverted flights: [Y] minutes
+- Maximum single-flight delay: [Z] minutes
+
+#### Airline Comparison
+
+Diversions were analyzed by airline to identify operational differences:
+
+```python
+# Analyze diversions by airline
+airline_analysis = diverted_flights.groupby('Marketing_Airline_Network').agg({
+    'FlightDate': 'count',
+    'Div1Airport': 'nunique',
+    'DepDelay': 'mean',
+    'ArrDelay': 'mean'
+}).rename(columns={'FlightDate': 'num_diversions'})
+
+airline_analysis = airline_analysis.sort_values('num_diversions', ascending=False)
+```
+
+| Airline | Diversion Count | Avg Dep Delay | Avg Arr Delay |
+|---------|-----------------|---------------|---------------|
+| [Airline 1] | [X] | [A] min | [B] min |
+| [Airline 2] | [Y] | [C] min | [D] min |
+| [Airline 3] | [Z] | [E] min | [F] min |
+
+---
+
+## What This Analysis Tells Us
+
+### About Diversion Clustering
+The 12-hour temporal clustering reveals that:
+- Diversions are not random; they cluster around specific destinations during narrow time windows
+- Multiple diversions within 12 hours suggest shared root causes (weather, capacity, ATC issues)
+- Cluster size indicates disruption severity
+
+### About Geographic Patterns
+The geographic visualizations show:
+- Certain airports (PHX, IAH, IND) repeatedly serve as diversion hubs
+- System-wide vs. regional events have different impacts
+- West Coast, Texas, and Midwest emerge as diversion hotspots
+
+### About Operational Impact
+The delay analysis demonstrates:
+- Diversions cause significant departure delays [X] minutes on average
+- Arrival delays compound, affecting downstream flights
+- Cascading effects spread disruptions through the network
+
+### About Airline Differences
+Airline comparison reveals:
+- Variation in diversion frequency by carrier
+- May reflect route network, fleet size, or operational practices
+- Some airlines absorb diversions more efficiently than others
+
+---
+
+## Analysis Limitations
+
+1. **No causal information**: Analysis shows patterns but not root causes (weather, mechanical, ATC)
+2. **First diversion only**: Secondary diversions not tracked; cascade effects underestimated
+3. **No weather context**: Cannot verify weather-related diversion hypothesis
+4. **Historical data only**: Cannot predict future diversions
+5. **Airline bias**: Different airlines may report data inconsistently
+
+---
+
+## Methodological Decisions
+
+### Why Temporal Clustering with 12-Hour Threshold?
+
+The approach was chosen because:
+1. **Interpretability**: Clusters directly represent real disruption events
+2. **Domain alignment**: 12-hour window matches airline operational recovery cycles
+3. **Simplicity**: Easy to understand and reproduce
+4. **Efficiency**: Computationally efficient for large datasets
+5. **Causality**: Temporal proximity suggests shared root causes
+
+### Why Group by Destination?
+
+Grouping by destination airport reveals:
+- Which airports are most vulnerable to cascading diversions
+- Geographic concentration vs. system-wide impact
+- Capacity constraints at specific locations
+- Ripple effects when one airport is overwhelmed
+
+### Why Visualize with Bezier Curves?
+
+Bezier curves were used for flight paths because:
+- Great circle routes are difficult to visualize at Mercator projection
+- Curved paths make overlapping routes distinguishable
+- Color-coding by airline reveals carrier-specific patterns
+- Interactive Plotly maps allow exploration of detailed routes
+
+### Assumptions Made
+
+1. **Temporal assumption**: Diversions within 12 hours are part of same event
+2. **Destination assumption**: Diversions to same destination within time window are related
+3. **Independence**: Clusters separated by >12 hours are treated as independent events
+
+---
+
+## Code Availability
+
+All analysis code is available in the Jupyter notebook: `5500_flightDiversion.ipynb`
+
+---
+
+## Next Steps in Analysis
+
+Potential extensions to this analysis:
+
+1. **Incorporate weather data** - Join with NOAA weather to verify weather-related diversions
+2. **Track cascading effects** - Follow secondary diversions through the network
+3. **Predict diversion risk** - Build ML model to predict diversion likelihood
+4. **Economic impact** - Quantify costs of diversions to airlines and passengers
+5. **Sentiment analysis** - Analyze passenger reactions on social media during events
+
+---
+
+**Analysis Completed**: [DATE]

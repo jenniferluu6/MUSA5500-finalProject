@@ -1,0 +1,227 @@
+---
+title: "Interactive Dashboard"
+---
+
+## Overview
+
+This page documents the interactive Panel dashboard developed to explore flight diversion patterns. The dashboard allows users to filter and analyze diversions in real-time using multiple interactive controls.
+
+---
+
+## Dashboard Features
+
+### Interactive Filters
+
+The dashboard includes three main filters that work together to subset the data:
+
+**1. Airline Selection**
+- Multi-select dropdown to choose one or more airlines
+- Default: Top 3 airlines by diversion count
+- Enables airline-specific analysis and comparison
+
+**2. Date Range Slider**
+- Specify custom date ranges (July 2021 - December 2024)
+- Allows temporal analysis of diversions
+- Supports seasonal pattern exploration
+
+**3. Dynamic Summary Statistics**
+- Updates automatically when filters change
+- Displays:
+  - Total diversions in filtered dataset
+  - Number of unique diversion airports
+  - Average departure delay (in minutes)
+
+### Visualizations
+
+#### Top Diversion Airports Map
+- Interactive geographic map showing the top 15 diversion airports
+- Marker size represents frequency of diversions
+- Hover over airports to see exact diversion counts
+- Allows geographic pattern identification
+
+**What it shows**: Which airports are receiving the most diverted flights during the selected time period and for chosen airlines.
+
+**How to interpret**: Larger circles = more diversions. Geographic clusters suggest regional capacity issues.
+
+#### Diversions by Airline Bar Chart
+- Horizontal bar chart ranking airlines by diversion count
+- Colors distinguish between airlines
+- Hover for exact numbers
+
+**What it shows**: How diversions are distributed across airlines in your filtered dataset.
+
+**How to interpret**: Comparison of operational disruption frequency by carrier. May reflect differences in route networks, fleet size, or operational practices.
+
+#### Summary Statistics Cards
+- Three key metrics displayed prominently
+- Background colors for quick visual scanning
+- Update in real-time as filters change
+
+**Metrics**:
+1. **Total Diversions** (Blue) - Sum of all diversions matching filters
+2. **Diversion Airports** (Purple) - Count of unique airports receiving diversions
+3. **Avg Departure Delay** (Green) - Mean delay for diverted flights
+
+---
+
+## How to Use the Dashboard
+
+### Basic Workflow
+
+1. **Start with full dataset**
+   - All airlines selected
+   - Full date range (July 2021 - December 2024)
+
+2. **Select airlines of interest**
+   - Click on airline dropdown
+   - Choose one or more carriers
+   - Dashboard updates automatically
+
+3. **Narrow date range**
+   - Use date slider to focus on time period
+   - Helpful for identifying seasonal patterns
+   - Can zoom into specific disruption events
+
+4. **Analyze results**
+   - Check summary statistics
+   - Explore geographic distribution on map
+   - Compare airlines using bar chart
+
+### Example Analyses
+
+**Find Peak Diversion Periods**
+- Set date range to one month
+- Select all airlines
+- Identify which airports spike in activity
+
+**Compare Airline Performance**
+- Set date range to full dataset
+- Select one airline at a time
+- Compare summary statistics across carriers
+
+**Explore Regional Events**
+- Focus on date range when you know a disruption occurred
+- Select relevant airlines
+- Analyze geographic concentration of diversions
+
+---
+
+## Technical Details
+
+### Technology Stack
+- **Framework**: Panel (by HoloViz)
+- **Data Processing**: Pandas
+- **Visualization**: Plotly
+- **Data Source**: BTS OTMC-OTP database (2021-2024)
+
+### Cross-Filtering Implementation
+The dashboard uses Panel's reactive decorators (`@pn.depends()`) to automatically update all visualizations when any filter changes. This means:
+- Changing airline selection updates the map and chart
+- Adjusting date range recalculates all statistics
+- All changes are instantaneous (no need to click "Update")
+
+### Performance Considerations
+- Dashboard loads [X] total diversion records
+- Filtering operations complete in <1 second
+- Map rendering optimized for smooth interaction
+- Designed for [X] GB of data
+
+---
+
+## Insights from Dashboard
+
+### Key Patterns Observable
+
+**Geographic Concentration**
+The map clearly shows which airports serve as primary diversion hubs. Common patterns include:
+- West Coast: ONT, PHX, LAX, SFO
+- Texas: IAH, DFW, SAT, AUS
+- Midwest: IND, STL, MKE
+- Southeast: ATL, MIA, MCO
+
+**Airline Variation**
+Significant differences exist in diversion frequency by airline, driven by:
+- Route network size and destinations served
+- Fleet composition and aircraft types
+- Operational practices and disruption management
+- Timing of analysis period (some airlines may have more flights during studied period)
+
+**Temporal Patterns**
+Using the date range filter reveals:
+- [Seasonal patterns if any]
+- [Day-of-week effects if present]
+- [Major disruption events]
+
+### Using Dashboard for Decision-Making
+
+**For Airlines:**
+- Identify routes with highest diversion risk
+- Plan capacity and staffing for vulnerable airports
+- Compare performance to competitors
+
+**For Airports:**
+- Understand diversion traffic patterns
+- Plan for overflow capacity during peak periods
+- Coordinate with other regional airports
+
+**For Researchers:**
+- Explore relationships between variables
+- Generate hypotheses about disruption causes
+- Validate findings from other analyses
+
+---
+
+## Limitations
+
+- **No causal information**: Dashboard shows patterns but not causes
+- **Historical data only**: Cannot predict future diversions
+- **Aggregated view**: Individual flight details not shown
+- **Weather context missing**: No concurrent weather data available
+- **First diversion only**: Secondary diversions not tracked
+
+---
+
+## Future Enhancements
+
+Potential improvements to dashboard:
+
+1. **Add weather overlay** - Show weather conditions during diversion periods
+2. **Animated time series** - Play through months/years to see patterns evolve
+3. **Route-specific analysis** - Filter by origin and destination airports
+4. **Delay correlation** - Show relationship between diversion frequency and delays
+5. **Predictive model** - Use ML to predict diversion likelihood for future flights
+6. **Download data** - Export filtered dataset as CSV
+
+---
+
+## Accessing the Dashboard
+
+### Local Version
+To run the dashboard locally on your computer:
+
+```bash
+# Install dependencies
+pip install panel plotly pandas
+
+# Run the dashboard
+panel serve dashboard.py --show
+```
+
+### Deployed Version
+[Dashboard URL - Add when deployed to web]
+
+---
+
+## Questions & Support
+
+For questions about:
+- **How to use**: See "How to Use" section above
+- **Data interpretation**: See "Insights from Dashboard" section
+- **Technical issues**: Check that you have latest versions of Panel and Plotly
+- **Analysis questions**: See full documentation at [link to main site]
+
+---
+
+**Dashboard Created**: [DATE]
+**Last Updated**: [DATE]
+**Data Current Through**: December 2024

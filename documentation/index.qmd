@@ -1,0 +1,126 @@
+---
+title: "Flight Diversions: Understanding Air Traffic Disruptions"
+subtitle: "A comprehensive data science analysis of flight diversions (2021-2024)"
+format:
+  html:
+    page-layout: full
+    toc: false
+---
+
+## Welcome
+
+This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining data-driven analysis with interactive visualizations, we uncover patterns in when, where, and why flights are diverted from their intended destinations. Could this tell us something about airlines as well?
+
+---
+
+## Why This Matters
+
+Flight diversions represent a significant disruption to both airlines and passengers. Understanding diversion patterns helps:
+
+- **Airlines**: Optimize route planning and operational resilience. By identifying which airports, time periods, and recovery issues are prone to diversions, airlines can pre-position aircraft, adjust crew schedules, and reroute flights proactively. This minimizes operational costs and improves schedule reliability.
+- **Policymakers**: Identify systemic bottlenecks in air traffic management. Diversion clusters reveal capacity constraints at specific airports, informing infrastructure investment decisions and air traffic control policy.
+- **Researchers**: Better understand the vulnerabilities and resilience patterns in the aviation system. Flight diversions expose how the network responds to disruptions and reveal dependencies between airports.
+
+---
+
+## Project Overview
+
+### Key Findings
+
+- **64,816 total diversions** documented across the 07/2021-12/2024 period, totaling 25,386,632 flights (0.255%)
+- **10 distinct airlines** in the dataset
+- Classification of diversion clusters and their affect on the airport network across the U.S.
+
+### Methodology
+
+This project follows a complete data science pipeline:
+
+1. **Data Collection**: Aggregating 42 months of BTS data and airport location data. 
+2. **Data Cleaning**: Filtering, validation, and integration
+3. **Analysis**: Clustering and temporal analysis. 
+4. **Visualization**: Interactive maps of major clusters and their affect on the airport system. 
+5. **Communication**: Clear documentation and insights. 
+
+---
+
+## Interactive Dashboard
+
+Explore the data yourself with my interactive dashboard.
+
+Interact with filters, zoom into specific airports, and explore patterns by date, and airline.
+:::
+
+---
+
+## Documentation Structure
+
+This site contains:
+
+- **[Data Collection](01-collection.qmd)**: How I sourced and prepared the data
+- **[Analysis](02-analysis.qmd)**: Methodology, findings, and statistical insights
+- **[Visualizations](03-visualization.qmd)**: Interactive maps and their interpretations
+- **[Results](04-results.qmd)**: Key takeaways and conclusions
+
+---
+
+## Quick Stats
+
+| Metric | Value |
+|--------|-------|
+| **Time Period** | July 2021 - December 2024 |
+| **Data Sources** | BTS OTMC-OTP Database, FAA Database |
+| **Analysis Type** | Geospatial Clustering, Temporal Analysis |
+| **Visualizations** | Interactive Plotly maps |
+| **Total Diversions** | 64,816 |
+
+---
+
+## About This Project
+
+This analysis was conducted as a final project for a Python data science course, emphasizing:
+
+- Multi-source data integration
+- Complex geospatial analysis
+- Interactive web-based visualization
+- Clear communication of technical findings
+
+### Technologies Used
+
+- **Data Processing**: Pandas, GeoPandas, NumPy
+- **Analysis**: Scikit-learn (K-means clustering), SciPy
+- **Visualization**: Plotly, Matplotlib
+- **Documentation**: Quarto, Jupyter
+- **Deployment**: GitHub Pages 
+
+---
+
+## Get Started
+
+1. Read through the [Data Collection](01-collection.qmd) section to understand the data sources
+2. Explore the [Analysis](02-analysis.qmd) for methodology
+3. Check out the [Visualizations](03-visualization.qmd) for interactive exploration
+
+---
+
+## Questions?
+
+This project demonstrates:
+- Sound data science methodology
+- Complex analysis of real-world aviation data
+- Clear communication of technical findings
+- Effective use of interactive visualization
+
+For questions about the methodology, data sources, or analysis approach, see the detailed documentation pages.
+
+---
+
+## Citation
+
+If you reference this analysis, please cite as:
+
+> Luu, Jennifer. (2024). Flight Diversions: A Data Science Analysis. 
+> GitHub Repository: [add repo link]
+
+---
+
+**Last Updated**: [DATE]

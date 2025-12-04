@@ -1,0 +1,52 @@
+project:
+  type: website
+  title: "Flight Diversions: A Data Science Analysis"
+  output-dir: _output
+
+website:
+  title: "Flight Diversions Analysis"
+  site-url: "https://your-github-username.github.io/flight-diversions"
+  navbar:
+    background: "#1976D2"
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Data Collection"
+        href: 01-collection.qmd
+      - text: "Analysis"
+        href: 02-analysis.qmd
+      - text: "Visualizations"
+        href: 03-visualization.qmd
+      - text: "Results"
+        href: 04-results.qmd
+      - text: "Dashboard"
+        href: 05-dashboard.qmd
+        target: "_blank"
+    
+  sidebar:
+    - id: home
+      contents: index.qmd
+    - id: docs
+      title: Documentation
+      contents:
+        - 01-collection.qmd
+        - 02-analysis.qmd
+        - 03-visualization.qmd
+        - 04-results.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: false
+    code-line-numbers: true
+    highlight-style: github
+    include-in-header:
+      - text: |
+          <script async defer src="https://buttons.github.io/buttons.js"></script>

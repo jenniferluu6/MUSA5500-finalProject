@@ -1,0 +1,384 @@
+---
+title: "Results & Conclusions"
+---
+
+## Executive Summary
+
+This analysis examined [X] flight diversions across the United States from July 2021 to December 2024, identifying [Y] distinct diversion clusters and uncovering patterns in when, where, and how flights are redirected from their intended destinations.
+
+**Main Finding**: Flight diversions are not random; they cluster around specific hub airports during specific time periods, suggesting systematic operational vulnerabilities in the U.S. aviation system.
+
+---
+
+## Key Findings
+
+### Finding 1: [TITLE]
+
+**The Discovery**: 
+[Describe what you found - 2-3 sentences]
+
+**Evidence**:
+- [Specific data point from your analysis]
+- [Specific data point from your analysis]
+- [Specific data point from your analysis]
+
+**Why It Matters**:
+[Explain the operational or strategic significance - Who cares? Why should they?]
+
+**Related Pattern**:
+This appears most prominently in [Cluster X] during [DATE RANGE], affecting [AIRPORT] primarily.
+
+---
+
+### Finding 2: [TITLE]
+
+**The Discovery**: 
+[Describe what you found - 2-3 sentences]
+
+**Evidence**:
+- [Specific data point]
+- [Specific data point]
+- [Specific data point]
+
+**Why It Matters**:
+[Explain significance]
+
+**Related Pattern**:
+[Which clusters show this? Which airlines?]
+
+---
+
+### Finding 3: [TITLE]
+
+**The Discovery**: 
+[Describe what you found - 2-3 sentences]
+
+**Evidence**:
+- [Specific data point]
+- [Specific data point]
+- [Specific data point]
+
+**Why It Matters**:
+[Explain significance]
+
+**Related Pattern**:
+[Which clusters show this?]
+
+---
+
+## Quantitative Summary
+
+| Metric | Value |
+|--------|-------|
+| **Total Diversions Analyzed** | [X] |
+| **Time Period** | July 2021 - December 2024 |
+| **Diversion Clusters Identified** | [X] |
+| **Unique Airports Involved** | [Y] |
+| **Airlines in Dataset** | [Z] |
+| **Average Daily Diversions** | [A] |
+| **Peak Day Diversions** | [B] on [DATE] |
+| **Most Common Diversion Airport** | [AIRPORT] with [C] diversions |
+| **Average Departure Delay (Diverted)** | [D] minutes |
+| **Average Arrival Delay (Diverted)** | [E] minutes |
+
+---
+
+## Cluster Summary
+
+### Cluster 1: [NAME]
+- **Primary Destination**: [AIRPORT]
+- **Common Diversion**: [AIRPORT]
+- **Period**: [DATE RANGE]
+- **Number of Events**: [X]
+- **Unique Origins**: [Y]
+- **Airlines Affected**: [LIST]
+- **Significance**: [Why was this cluster important?]
+
+### Cluster 2: [NAME]
+- **Primary Destination**: [AIRPORT]
+- **Common Diversion**: [AIRPORT]
+- **Period**: [DATE RANGE]
+- **Number of Events**: [X]
+- **Unique Origins**: [Y]
+- **Airlines Affected**: [LIST]
+- **Significance**: [Why was this cluster important?]
+
+### Cluster 3: [NAME]
+- **Primary Destination**: [AIRPORT]
+- **Common Diversion**: [AIRPORT]
+- **Period**: [DATE RANGE]
+- **Number of Events**: [X]
+- **Unique Origins**: [Y]
+- **Airlines Affected**: [LIST]
+- **Significance**: [Why was this cluster important?]
+
+---
+
+## Operational Implications
+
+### For Airlines
+
+**Recommendation 1**: [Based on your findings, what should airlines do?]
+- Example: "Pre-position aircraft at [AIRPORT] during [SEASON] to handle anticipated diversions"
+
+**Recommendation 2**: [Another operational insight]
+- Example: "Route planning should account for [AIRPORT] capacity constraints"
+
+### For Airport Operations
+
+**Finding**: [What do airport operators need to know?]
+- [Specific implication]
+- [Specific implication]
+
+### For Policy Makers
+
+**System-Level Insight**: [What does this tell us about air traffic management?]
+- [Implication 1]
+- [Implication 2]
+
+---
+
+## Statistical Confidence
+
+### Methodology Validation
+
+**Data Quality**: 
+- [X]% of records had complete geographic data
+- [Y]% of records had valid airline information
+- No significant gaps in time period coverage
+
+**Analysis Rigor**:
+- K-means clustering with [K] clusters (validated via elbow method)
+- [X] total records analyzed
+- Geospatial analysis using standardized airport coordinates
+
+**Limitations on Confidence**:
+- Weather data not available (cannot verify causation)
+- Only first diversion tracked (cascade effects unknown)
+- Diversion reason not recorded in BTS data
+
+### Can We Generalize These Findings?
+
+**Yes, for**:
+- Identifying which airports experience most diversions
+- Understanding seasonal patterns
+- Ranking airlines by diversion frequency
+- Geographic clustering patterns
+
+**Cautiously, for**:
+- Predicting future diversions (patterns may change)
+- Determining causes of diversions
+- Quantifying passenger impact
+
+**No, for**:
+- Specific weather-related predictions
+- Mechanical failure analysis
+- International flight patterns
+
+---
+
+## What Surprised Us
+
+**Surprise 1**: [What did you not expect to find?]
+- Expected: [What you thought would happen]
+- Found: [What actually happened]
+- Explanation: [Why might this be?]
+
+**Surprise 2**: [Another unexpected finding]
+- Expected vs. Found vs. Why
+
+**Surprise 3**: [Third unexpected insight]
+- Expected vs. Found vs. Why
+
+---
+
+## What This Reveals About Aviation
+
+### The Bigger Picture
+
+This analysis reveals that the U.S. aviation system [INSERT INSIGHT]:
+- [Point 1 about system resilience/vulnerability]
+- [Point 2 about operational patterns]
+- [Point 3 about capacity or planning]
+
+### System Resilience
+
+**Positive**: [What this data shows about system strengths]
+- Example: "Hub airports successfully absorb diversions [X]% of the time"
+
+**Negative**: [What this data shows about vulnerabilities]
+- Example: "[AIRPORT] becomes bottleneck when [X] happens"
+
+### Passenger Experience Implications
+
+For the [X] passengers affected by these diversions:
+- Average delay impact: [Y] minutes
+- Cascade effect: Delays to next flights: [Z] minutes
+- System recovery time: [A] hours
+
+---
+
+## Limitations of This Analysis
+
+### Data Limitations
+
+1. **No Weather Context**: 
+   - Cannot determine if diversions were weather-related
+   - BTS data lacks concurrent weather conditions
+   - *Impact*: Cannot verify our assumptions about causation
+
+2. **Single Diversion Only**: 
+   - BTS only records first diversion
+   - Cascading diversions not tracked
+   - *Impact*: May underestimate true system disruption
+
+3. **No Diversion Reason**: 
+   - Cannot distinguish: weather vs. mechanical vs. ATC
+   - *Impact*: Cannot identify root causes
+
+4. **U.S. Domestic Only**: 
+   - International diversions excluded
+   - *Impact*: Incomplete picture of some carriers
+
+### Methodological Limitations
+
+1. **K-Means Assumptions**: 
+   - Assumes spherical clusters
+   - May miss irregular patterns
+   - *Mitigation*: Cluster results validated visually on maps
+
+2. **Geographic Clustering**: 
+   - Assumes nearby airports are related
+   - May miss causal relationships
+   - *Mitigation*: Temporal clustering helps address this
+
+3. **Time Periods**: 
+   - Dataset spans 45 months but not comprehensive
+   - Some recent events (post-Dec 2024) not included
+   - *Impact*: Patterns may have shifted since dataset ends
+
+---
+
+## Future Research Directions
+
+### Short Term (Easy to Do)
+
+1. **Add Weather Data**
+   - Join BTS diversions with NOAA weather data
+   - Validate weather-related diversion hypothesis
+   - Identify weather-sensitive airports
+
+2. **Track Cascading Effects**
+   - Follow diversions through secondary flights
+   - Quantify passenger impact more fully
+   - Model cascade duration
+
+3. **Airline Strategy Analysis**
+   - Compare routing strategies between carriers
+   - Identify best practices for diversion handling
+   - Benchmark airline performance
+
+### Medium Term (More Work)
+
+4. **Predictive Modeling**
+   - Use scikit-learn to predict diversion likelihood
+   - Input: Route, date, season, weather forecast
+   - Output: Diversion probability
+
+5. **Network Analysis**
+   - Model aviation system as network
+   - Identify critical nodes (airports)
+   - Analyze network resilience
+
+6. **Economic Impact**
+   - Estimate costs of diversions to airlines
+   - Calculate passenger impact (delays, missed connections)
+   - Quantify systemic efficiency loss
+
+### Long Term (Ambitious)
+
+7. **Policy Recommendation Engine**
+   - Use ML to recommend infrastructure investments
+   - Identify bottleneck airports needing capacity
+   - Model impact of policy changes
+
+8. **Real-Time Diversion Forecasting**
+   - Integrate real-time weather and flight data
+   - Predict diversions 24-48 hours in advance
+   - Alert airlines and passengers proactively
+
+---
+
+## Reproducibility
+
+This analysis can be reproduced by:
+
+1. **Downloading Data**: 
+   - Visit https://www.transtats.bts.gov/
+   - Download OTMC-OTP monthly files (2021-07 to 2024-12)
+
+2. **Running Analysis**:
+   - Execute `01-data-cleaning.ipynb` to process raw data
+   - Run `02-clustering.ipynb` to identify clusters
+   - Generate visualizations from `03-visualizations.ipynb`
+
+3. **Code Availability**:
+   - All analysis code provided in GitHub repository
+   - Python environment specified in `requirements.txt`
+   - Instructions in main README
+
+---
+
+## Conclusion
+
+Flight diversions in the U.S. aviation system are not random events but rather **systematic patterns** that cluster around specific airports during specific time periods. This analysis identified [X] major diversion clusters, each affecting hundreds of flights and thousands of passengers.
+
+The findings suggest that:
+
+1. **[FINDING 1]** - Implication for airlines/airports/passengers
+2. **[FINDING 2]** - Implication for airlines/airports/passengers
+3. **[FINDING 3]** - Implication for airlines/airports/passengers
+
+By understanding these patterns, stakeholders in aviation operations can:
+- **Airports**: Better plan capacity and staffing
+- **Airlines**: Optimize routing and crew scheduling
+- **Passengers**: Anticipate and prepare for disruptions
+- **Policy Makers**: Identify infrastructure needs
+
+This work demonstrates that publicly available transportation data, when combined with modern data science techniques, can reveal actionable insights into complex system behavior.
+
+---
+
+## References
+
+### Data Sources
+- U.S. Bureau of Transportation Statistics (BTS): https://www.transtats.bts.gov/
+- [Other sources used]
+
+### Methods
+- K-Means Clustering: [Scikit-learn documentation]
+- Geospatial Analysis: [GeoPandas documentation]
+- [Other method references]
+
+### Related Work
+- [Academic papers on aviation disruptions, if any cited]
+- [Industry reports on flight diversions]
+
+---
+
+## About This Analysis
+
+**Project Type**: Data Science Final Project
+**Analysis Period**: July 2021 - December 2024
+**Total Records**: [X] flight diversions
+**Methods**: K-means clustering, geospatial analysis, temporal analysis
+**Technologies**: Python, Pandas, GeoPandas, Scikit-learn, Plotly
+
+**Author**: [Your Name]
+**Date Completed**: [DATE]
+**Last Updated**: [DATE]
+
+---
+
+**Questions or Comments?** 
+This analysis is open for discussion and feedback. The patterns identified suggest areas for further investigation and practical application in aviation operations.
