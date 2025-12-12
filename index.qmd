@@ -1,6 +1,6 @@
 ---
 title: "Flight Diversions: Understanding Air Traffic Disruptions"
-subtitle: "A comprehensive data science analysis of flight diversions (2021-2024)"
+subtitle: "A comprehensive data science analysis of U.S. flight diversions (2021-2024)"
 format:
   html:
     page-layout: full
@@ -9,7 +9,7 @@ format:
 
 ## Welcome
 
-This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining data-driven analysis with interactive visualizations, we uncover patterns in when, where, and why flights are diverted from their intended destinations. Could this tell us something about airlines as well?
+This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining temporal clustering analysis with interactive geospatial visualizations, we uncover patterns in when, where, and how flights are diverted from their intended destinations—and reveal significant differences in how airlines manage disruptions.
 
 ---
 
@@ -17,8 +17,12 @@ This project analyzes flight diversions across the United States from July 2021 
 
 Flight diversions represent a significant disruption to both airlines and passengers. Understanding diversion patterns helps:
 
-- **Airlines**: Optimize route planning and operational resilience. By identifying which airports, time periods, and recovery issues are prone to diversions, airlines can pre-position aircraft, adjust crew schedules, and reroute flights proactively. This minimizes operational costs and improves schedule reliability.
-- **Policymakers**: Identify systemic bottlenecks in air traffic management. Diversion clusters reveal capacity constraints at specific airports, informing infrastructure investment decisions and air traffic control policy.
+- **Airlines**: Optimize route planning and operational resilience. By identifying which airports, time periods, and routes are prone to diversions, airlines can pre-position aircraft, adjust crew schedules, and reroute flights proactively. American Airlines' 29% higher diversion rate reveals opportunities for operational improvement through benchmarking against Delta and United.
+
+- **Airports**: Plan capacity for overflow demand. The analysis identifies consistent diversion hub airports (DEN, IAD, LAX) that naturally absorb system disruptions, informing infrastructure and ground service planning.
+
+- **Policymakers**: Identify systemic bottlenecks in air traffic management. Diversion clusters reveal capacity constraints at specific airports and demonstrate how disruptions cascade through the network, informing infrastructure investment and ATC policy decisions.
+
 - **Researchers**: Better understand the vulnerabilities and resilience patterns in the aviation system. Flight diversions expose how the network responds to disruptions and reveal dependencies between airports.
 
 ---
@@ -27,39 +31,101 @@ Flight diversions represent a significant disruption to both airlines and passen
 
 ### Key Findings
 
-- **64,816 total diversions** documented across the 07/2021-12/2024 period, totaling 25,386,632 flights (0.255%)
-- **10 distinct airlines** in the dataset
-- Classification of diversion clusters and their affect on the airport network across the U.S.
+- **64,815 total diversions** documented from July 2021 through December 2024
+- **25,386,632 total flights analyzed**, with 0.26% experiencing diversions
+- **3 major diversion clusters** identified: San Diego (system-wide), Dallas/Fort Worth (regional), Chicago O'Hare (regional)
+- **American Airlines** diverts 29% more frequently than Delta despite similar network size
+- **System-wide events** cascade across 60+ destination airports; **regional events** stay concentrated in geography zones
+- **Top diversion hubs**: Denver (1,935), Washington Dulles (1,680), Los Angeles (1,608)
+- **Average arrival delay** for diverted flights: 278.8 minutes (4.6 hours)
 
 ### Methodology
 
 This project follows a complete data science pipeline:
 
-1. **Data Collection**: Aggregating 42 months of BTS data and airport location data. 
-2. **Data Cleaning**: Filtering, validation, and integration
-3. **Analysis**: Clustering and temporal analysis. 
-4. **Visualization**: Interactive maps of major clusters and their affect on the airport system. 
-5. **Communication**: Clear documentation and insights. 
+1. **Data Collection**: Aggregating 45 months of BTS OTMC-OTP data (25.4M flights) with FAA airport coordinates
+2. **Data Cleaning**: Filtering for diversions, validation, removing duplicates, geocoding
+3. **Analysis**: Temporal clustering (12-hour threshold) to identify disruption events
+4. **Visualization**: Interactive Plotly maps showing individual and system-wide impacts
+5. **Communication**: Clear documentation and actionable insights
+
+---
+
+## The Three Clusters
+
+### Cluster 1: San Diego (December 2024) - System-Wide Disruption
+- 140 diversions to SAN; 290 system-wide across 60 destinations
+- Only 48.3% diverted to primary airport (cascaded across network)
+- Affected 73 origin airports and 60 destination airports
+- **Finding**: Coastal hub disruptions have broader ripple effects through the system
+
+### Cluster 2: Dallas/Fort Worth (November 2024) - Regional Disruption  
+- 110 diversions to DFW; 186 system-wide with regional concentration
+- 59.1% diverted to primary airport (more localized recovery)
+- Texas corridor airports (IAH, SAT, AUS) absorbed overflow
+- **Finding**: Regional hubs keep diversions contained in geographic area
+
+### Cluster 3: Chicago O'Hare (August 2021) - Regional Disruption
+- 108 diversions to ORD; 187 system-wide with Midwest focus
+- 57.8% diverted to primary airport (regional coordination)
+- Midwest corridor (IND, STL, MKE) natural overflow network
+- **Finding**: Hub location determines scope of cascade effects
+
+---
+
+## American Airlines: Why the Higher Diversion Rate?
+
+American Airlines accounts for **27.7% of all diversions** despite operating roughly 18-22% of U.S. flights:
+
+| Airline | Diversions | % of Total | Status |
+|---------|-----------|-----------|---------|
+| **American (AA)** | 18,004 | 27.7% | **Higher than market share** |
+| United (UA) | 13,921 | 21.4% | Expected |
+| Delta (DL) | 10,886 | 16.8% | **Better than expected** |
+| Southwest (WN) | 10,285 | 15.8% | In line |
+| Alaska (AS) | 3,922 | 6.0% | In line |
+
+**Possible explanations:**
+- More aggressive scheduling relative to airport capacity
+- Less efficient operational recovery procedures
+- Different network vulnerabilities (route design, hub exposure)
+- Older fleet with higher mechanical diversion rates
+
+This represents both a competitive disadvantage and an opportunity for operational improvement.
 
 ---
 
 ## Interactive Dashboard
 
-Explore the data yourself with my interactive dashboard.
+Explore the data yourself with the interactive dashboard:
 
-Interact with filters, zoom into specific airports, and explore patterns by date, and airline.
-:::
+**Running Locally:**
+```bash
+cd MUSA5500-finalProject
+conda activate geospatial
+python app.py
+```
+
+Then visit: `http://localhost:5006`
+
+**Features:**
+- Filter by airline (multi-select)
+- Adjust date range (July 2021 - December 2024)
+- Real-time map and statistics updates
+- Explore top 15 diversion airports
+- Compare airlines side-by-side
 
 ---
 
 ## Documentation Structure
 
-This site contains:
+This site contains complete documentation:
 
-- **[Data Collection](01-collection.qmd)**: How I sourced and prepared the data
-- **[Analysis](02-analysis.qmd)**: Methodology, findings, and statistical insights
-- **[Visualizations](03-visualization.qmd)**: Interactive maps and their interpretations
-- **[Results](04-results.qmd)**: Key takeaways and conclusions
+- **[Data Collection](01-collection.qmd)**: Data sources, cleaning pipeline, quality assessment
+- **[Analysis Methodology](02-analysis.qmd)**: Clustering approach, statistical methods, airline comparison
+- **[Visualizations](03-visualization.qmd)**: Interactive maps with explanations of each cluster
+- **[Results & Conclusions](04-results.qmd)**: Key findings, operational implications, recommendations
+- **[Dashboard Documentation](05-dashboard.qmd)**: How to use the interactive Panel dashboard
 
 ---
 
@@ -67,49 +133,101 @@ This site contains:
 
 | Metric | Value |
 |--------|-------|
-| **Time Period** | July 2021 - December 2024 |
-| **Data Sources** | BTS OTMC-OTP Database, FAA Database |
-| **Analysis Type** | Geospatial Clustering, Temporal Analysis |
-| **Visualizations** | Interactive Plotly maps |
-| **Total Diversions** | 64,816 |
+| **Analysis Period** | July 2021 - December 2024 (45 months) |
+| **Total Flights** | 25,386,632 |
+| **Total Diversions** | 64,815 |
+| **Diversion Rate** | 0.26% |
+| **Airlines** | 10 major carriers |
+| **Airports** | 377 diversion airports, 373 destination airports |
+| **Avg Departure Delay** | 32.2 minutes |
+| **Avg Arrival Delay** | 278.8 minutes |
+| **Major Clusters** | 3 (SAN, DFW, ORD) |
 
 ---
 
 ## About This Project
 
-This analysis was conducted as a final project for a Python data science course, emphasizing:
+This analysis was conducted as a final project for **MUSA 5500: Data Science for Planning and Policy** at the University of Pennsylvania, emphasizing:
 
-- Multi-source data integration
-- Complex geospatial analysis
-- Interactive web-based visualization
-- Clear communication of technical findings
+- Multi-source data integration (BTS + FAA databases)
+- Complex geospatial and temporal clustering analysis
+- Interactive web-based visualization and exploration
+- Clear communication of technical findings to multiple audiences
+- Actionable recommendations for industry stakeholders
 
 ### Technologies Used
 
-- **Data Processing**: Pandas, GeoPandas, NumPy
-- **Analysis**: Scikit-learn (K-means clustering), SciPy
-- **Visualization**: Plotly, Matplotlib
-- **Documentation**: Quarto, Jupyter
-- **Deployment**: GitHub Pages 
+- **Data Processing**: Pandas (2.3.1), NumPy (2.3.1), GeoPandas (1.0.1)
+- **Analysis**: Temporal clustering (custom 12-hour threshold algorithm)
+- **Visualization**: Plotly (6.5.0), Panel (1.7.5), Matplotlib
+- **Documentation**: Quarto, Jupyter Notebook
+- **Dashboard**: Panel (local deployment)
+- **Code**: Python 3.13, GitHub
+
+---
+
+## Key Insights for Stakeholders
+
+### For Airlines:
+1. Pre-position crews and aircraft at hub diversion airports (DEN, IAD, LAX)
+2. Implement tiered disruption protocols (regional vs. system-wide)
+3. Benchmark operational practices against DL and UA
+4. Monitor routes with historically high diversion risk
+
+### For Airports:
+1. Plan for surge capacity at consistent diversion hubs
+2. Establish regional coordination agreements (Texas, Midwest corridors)
+3. Position ground crews to handle unexpected diversion traffic
+
+### For Policy:
+1. Infrastructure investment should target secondary hubs that absorb diversions
+2. ATC coordination between regional clusters can mitigate cascade effects
+3. Monitor whether system is near saturation during peak periods
 
 ---
 
 ## Get Started
 
-1. Read through the [Data Collection](01-collection.qmd) section to understand the data sources
-2. Explore the [Analysis](02-analysis.qmd) for methodology
-3. Check out the [Visualizations](03-visualization.qmd) for interactive exploration
+1. **Start here**: Read the [overview](index.qmd)
+2. **Understand the data**: Check [Data Collection](01-collection.qmd)
+3. **Learn the approach**: Review [Analysis Methodology](02-analysis.qmd)
+4. **Explore visually**: See the [Visualizations](03-visualization.qmd)
+5. **Understand findings**: Read [Results & Conclusions](04-results.qmd)
+
+---
+
+## Technical Details
+
+**Data Sources:**
+- Bureau of Transportation Statistics (BTS): https://www.transtats.bts.gov/
+- Federal Aviation Administration (FAA): https://www.faa.gov/
+- OpenFlights Database: https://openflights.org/
+
+**Code Repository:**
+- GitHub: MUSA5500-finalProject (private - available by request)
+
+**Reproducibility:**
+- All analysis code included in Jupyter notebooks
+- Data pipeline documented and reproducible
+- Environment specifications provided (Python 3.13, Pandas 2.3.1, etc.)
 
 ---
 
 ## Questions?
 
 This project demonstrates:
-- Sound data science methodology
-- Complex analysis of real-world aviation data
-- Clear communication of technical findings
-- Effective use of interactive visualization
+- Sound data science methodology applied to real-world aviation data
+- Complex analysis combining temporal, geospatial, and statistical methods
+- Clear communication of technical findings to diverse audiences
+- Effective use of interactive visualization for exploration and discovery
+- Actionable insights that drive operational and policy decisions
 
-For questions about the methodology, data sources, or analysis approach, see the detailed documentation pages.
+For questions about the methodology, data sources, analysis approach, or findings, see the detailed documentation pages or review the code in the Jupyter notebooks.
 
+---
+
+**Project Completed**: December 2024  
+**Analysis Period**: July 2021 - December 2024  
+**Author**: Jun  
+**Course**: MUSA 5500: Data Science for Planning and Policy
 

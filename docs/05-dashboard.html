@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -280,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Results</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./05-dashboard.html" target="_blank" aria-current="page"> 
+    <a class="nav-link active" href="./05-dashboard.html" aria-current="page"> 
 <span class="menu-text">Dashboard</span></a>
   </li>  
 </ul>
@@ -308,24 +343,24 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#how-to-use-the-dashboard" id="toc-how-to-use-the-dashboard" class="nav-link" data-scroll-target="#how-to-use-the-dashboard"><span class="header-section-number">3</span> How to Use the Dashboard</a>
   <ul class="collapse">
-  <li><a href="#basic-workflow" id="toc-basic-workflow" class="nav-link" data-scroll-target="#basic-workflow"><span class="header-section-number">3.1</span> Basic Workflow</a></li>
-  <li><a href="#example-analyses" id="toc-example-analyses" class="nav-link" data-scroll-target="#example-analyses"><span class="header-section-number">3.2</span> Example Analyses</a></li>
+  <li><a href="#running-locally" id="toc-running-locally" class="nav-link" data-scroll-target="#running-locally"><span class="header-section-number">3.1</span> Running Locally</a></li>
+  <li><a href="#basic-workflow" id="toc-basic-workflow" class="nav-link" data-scroll-target="#basic-workflow"><span class="header-section-number">3.2</span> Basic Workflow</a></li>
+  <li><a href="#example-analyses" id="toc-example-analyses" class="nav-link" data-scroll-target="#example-analyses"><span class="header-section-number">3.3</span> Example Analyses</a></li>
   </ul></li>
-  <li><a href="#live-dashboard" id="toc-live-dashboard" class="nav-link" data-scroll-target="#live-dashboard"><span class="header-section-number">4</span> Live Dashboard</a></li>
-  <li><a href="#technical-details" id="toc-technical-details" class="nav-link" data-scroll-target="#technical-details"><span class="header-section-number">5</span> Technical Details</a>
+  <li><a href="#technical-details" id="toc-technical-details" class="nav-link" data-scroll-target="#technical-details"><span class="header-section-number">4</span> Technical Details</a>
   <ul class="collapse">
-  <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack"><span class="header-section-number">5.1</span> Technology Stack</a></li>
-  <li><a href="#cross-filtering-implementation" id="toc-cross-filtering-implementation" class="nav-link" data-scroll-target="#cross-filtering-implementation"><span class="header-section-number">5.2</span> Cross-Filtering Implementation</a></li>
-  <li><a href="#performance" id="toc-performance" class="nav-link" data-scroll-target="#performance"><span class="header-section-number">5.3</span> Performance</a></li>
+  <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack"><span class="header-section-number">4.1</span> Technology Stack</a></li>
+  <li><a href="#cross-filtering-implementation" id="toc-cross-filtering-implementation" class="nav-link" data-scroll-target="#cross-filtering-implementation"><span class="header-section-number">4.2</span> Cross-Filtering Implementation</a></li>
+  <li><a href="#performance" id="toc-performance" class="nav-link" data-scroll-target="#performance"><span class="header-section-number">4.3</span> Performance</a></li>
   </ul></li>
-  <li><a href="#insights-from-dashboard" id="toc-insights-from-dashboard" class="nav-link" data-scroll-target="#insights-from-dashboard"><span class="header-section-number">6</span> Insights from Dashboard</a>
+  <li><a href="#insights-from-dashboard" id="toc-insights-from-dashboard" class="nav-link" data-scroll-target="#insights-from-dashboard"><span class="header-section-number">5</span> Insights from Dashboard</a>
   <ul class="collapse">
-  <li><a href="#key-patterns-observable" id="toc-key-patterns-observable" class="nav-link" data-scroll-target="#key-patterns-observable"><span class="header-section-number">6.1</span> Key Patterns Observable</a></li>
-  <li><a href="#using-dashboard-for-decision-making" id="toc-using-dashboard-for-decision-making" class="nav-link" data-scroll-target="#using-dashboard-for-decision-making"><span class="header-section-number">6.2</span> Using Dashboard for Decision-Making</a></li>
+  <li><a href="#key-patterns-observable" id="toc-key-patterns-observable" class="nav-link" data-scroll-target="#key-patterns-observable"><span class="header-section-number">5.1</span> Key Patterns Observable</a></li>
+  <li><a href="#using-dashboard-for-decision-making" id="toc-using-dashboard-for-decision-making" class="nav-link" data-scroll-target="#using-dashboard-for-decision-making"><span class="header-section-number">5.2</span> Using Dashboard for Decision-Making</a></li>
   </ul></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">7</span> Limitations</a></li>
-  <li><a href="#future-enhancements" id="toc-future-enhancements" class="nav-link" data-scroll-target="#future-enhancements"><span class="header-section-number">8</span> Future Enhancements</a></li>
-  <li><a href="#questions-support" id="toc-questions-support" class="nav-link" data-scroll-target="#questions-support"><span class="header-section-number">9</span> Questions &amp; Support</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">6</span> Limitations</a></li>
+  <li><a href="#future-enhancements" id="toc-future-enhancements" class="nav-link" data-scroll-target="#future-enhancements"><span class="header-section-number">7</span> Future Enhancements</a></li>
+  <li><a href="#questions-support" id="toc-questions-support" class="nav-link" data-scroll-target="#questions-support"><span class="header-section-number">8</span> Questions &amp; Support</a></li>
   </ul>
 </nav>
     </div>
@@ -403,8 +438,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="how-to-use-the-dashboard" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="how-to-use-the-dashboard"><span class="header-section-number">3</span> How to Use the Dashboard</h2>
-<section id="basic-workflow" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="basic-workflow"><span class="header-section-number">3.1</span> Basic Workflow</h3>
+<section id="running-locally" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="running-locally"><span class="header-section-number">3.1</span> Running Locally</h3>
+<p>To run the dashboard on your computer:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Navigate to project directory</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cd</span> MUSA5500-finalProject</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Activate geospatial environment</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="ex">conda</span> activate geospatial</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Run the app</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="ex">python</span> app.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then open your browser and go to: <code>http://localhost:5006</code></p>
+</section>
+<section id="basic-workflow" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="basic-workflow"><span class="header-section-number">3.2</span> Basic Workflow</h3>
 <ol type="1">
 <li><strong>Start with full dataset</strong>
 <ul>
@@ -431,38 +479,31 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 </section>
-<section id="example-analyses" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="example-analyses"><span class="header-section-number">3.2</span> Example Analyses</h3>
+<section id="example-analyses" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="example-analyses"><span class="header-section-number">3.3</span> Example Analyses</h3>
 <p><strong>Find Peak Diversion Periods</strong> - Set date range to one month - Select all airlines - Identify which airports spike in activity</p>
 <p><strong>Compare Airline Performance</strong> - Set date range to full dataset - Select one airline at a time - Compare summary statistics across carriers</p>
 <p><strong>Explore Regional Events</strong> - Focus on date range when you know a disruption occurred - Select relevant airlines - Analyze geographic concentration of diversions</p>
 <hr>
 </section>
 </section>
-<section id="live-dashboard" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="live-dashboard"><span class="header-section-number">4</span> Live Dashboard</h2>
-<p><a href="https://jenniferluu6-flightdiversions.streamlit.app"><strong>Click here to access the interactive dashboard →</strong></a></p>
-<p>The dashboard is deployed on Streamlit Cloud and updates in real-time as you interact with the filters.</p>
-<hr>
-</section>
-<section id="technical-details" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="technical-details"><span class="header-section-number">5</span> Technical Details</h2>
-<section id="technology-stack" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="technology-stack"><span class="header-section-number">5.1</span> Technology Stack</h3>
+<section id="technical-details" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="technical-details"><span class="header-section-number">4</span> Technical Details</h2>
+<section id="technology-stack" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="technology-stack"><span class="header-section-number">4.1</span> Technology Stack</h3>
 <ul>
 <li><strong>Framework</strong>: Panel (by HoloViz)</li>
-<li><strong>Deployment</strong>: Streamlit Cloud</li>
 <li><strong>Data Processing</strong>: Pandas</li>
 <li><strong>Visualization</strong>: Plotly</li>
 <li><strong>Data Source</strong>: BTS OTMC-OTP database (2021-2024)</li>
 </ul>
 </section>
-<section id="cross-filtering-implementation" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="cross-filtering-implementation"><span class="header-section-number">5.2</span> Cross-Filtering Implementation</h3>
+<section id="cross-filtering-implementation" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="cross-filtering-implementation"><span class="header-section-number">4.2</span> Cross-Filtering Implementation</h3>
 <p>The dashboard uses Panel’s reactive decorators (<code>@pn.depends()</code>) to automatically update all visualizations when any filter changes. This means: - Changing airline selection updates the map and chart - Adjusting date range recalculates all statistics - All changes are instantaneous (no need to click “Update”)</p>
 </section>
-<section id="performance" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="performance"><span class="header-section-number">5.3</span> Performance</h3>
+<section id="performance" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="performance"><span class="header-section-number">4.3</span> Performance</h3>
 <ul>
 <li>Dashboard loads 8,651 total diversion records</li>
 <li>Filtering operations complete in &lt;1 second</li>
@@ -471,24 +512,24 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="insights-from-dashboard" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="insights-from-dashboard"><span class="header-section-number">6</span> Insights from Dashboard</h2>
-<section id="key-patterns-observable" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="key-patterns-observable"><span class="header-section-number">6.1</span> Key Patterns Observable</h3>
+<section id="insights-from-dashboard" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="insights-from-dashboard"><span class="header-section-number">5</span> Insights from Dashboard</h2>
+<section id="key-patterns-observable" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="key-patterns-observable"><span class="header-section-number">5.1</span> Key Patterns Observable</h3>
 <p><strong>Geographic Concentration</strong> The map clearly shows which airports serve as primary diversion hubs. Common patterns include: - West Coast: ONT, PHX, LAX, SFO - Texas: IAH, DFW, SAT, AUS - Midwest: IND, STL, MKE - Southeast: ATL, MIA, MCO</p>
 <p><strong>Airline Variation</strong> Significant differences exist in diversion frequency by airline, driven by: - Route network size and destinations served - Fleet composition and aircraft types - Operational practices and disruption management - Timing of analysis period (some airlines may have more flights during studied period)</p>
 <p><strong>Temporal Patterns</strong> Using the date range filter reveals: - Peak diversion activity in winter months (December) - Regional variations in seasonal patterns - Major disruption events concentrated around specific dates</p>
 </section>
-<section id="using-dashboard-for-decision-making" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="using-dashboard-for-decision-making"><span class="header-section-number">6.2</span> Using Dashboard for Decision-Making</h3>
+<section id="using-dashboard-for-decision-making" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="using-dashboard-for-decision-making"><span class="header-section-number">5.2</span> Using Dashboard for Decision-Making</h3>
 <p><strong>For Airlines:</strong> - Identify routes with highest diversion risk - Plan capacity and staffing for vulnerable airports - Compare performance to competitors</p>
 <p><strong>For Airports:</strong> - Understand diversion traffic patterns - Plan for overflow capacity during peak periods - Coordinate with other regional airports</p>
 <p><strong>For Researchers:</strong> - Explore relationships between variables - Generate hypotheses about disruption causes - Validate findings from other analyses</p>
 <hr>
 </section>
 </section>
-<section id="limitations" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="limitations"><span class="header-section-number">7</span> Limitations</h2>
+<section id="limitations" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="limitations"><span class="header-section-number">6</span> Limitations</h2>
 <ul>
 <li><strong>No causal information</strong>: Dashboard shows patterns but not causes</li>
 <li><strong>Historical data only</strong>: Cannot predict future diversions</li>
@@ -498,8 +539,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <hr>
 </section>
-<section id="future-enhancements" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="future-enhancements"><span class="header-section-number">8</span> Future Enhancements</h2>
+<section id="future-enhancements" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="future-enhancements"><span class="header-section-number">7</span> Future Enhancements</h2>
 <p>Potential improvements to dashboard:</p>
 <ol type="1">
 <li><strong>Add weather overlay</strong> - Show weather conditions during diversion periods</li>
@@ -511,11 +552,11 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <hr>
 </section>
-<section id="questions-support" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="questions-support"><span class="header-section-number">9</span> Questions &amp; Support</h2>
-<p>For questions about: - <strong>How to use</strong>: See “How to Use” section above - <strong>Data interpretation</strong>: See “Insights from Dashboard” section - <strong>Technical issues</strong>: Make sure you have latest versions of Panel and Plotly - <strong>Analysis questions</strong>: See full documentation at main site</p>
+<section id="questions-support" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="questions-support"><span class="header-section-number">8</span> Questions &amp; Support</h2>
+<p>For questions about: - <strong>How to use</strong>: See “How to Use” section above - <strong>Data interpretation</strong>: See “Insights from Dashboard” section - <strong>Technical issues</strong>: Make sure you have Panel, Plotly, and Pandas installed in your geospatial environment - <strong>Analysis questions</strong>: See full documentation at main site</p>
 <hr>
-<p><strong>Dashboard Deployed</strong>: December 2024 <strong>Data Current Through</strong>: December 2024</p>
+<p><strong>Dashboard Created</strong>: December 2024 <strong>Data Current Through</strong>: December 2024</p>
 
 
 </section>

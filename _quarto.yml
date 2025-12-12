@@ -22,7 +22,6 @@ website:
         href: 04-results.qmd
       - text: "Dashboard"
         href: 05-dashboard.qmd
-        target: "_blank"
     
   sidebar:
     - id: home

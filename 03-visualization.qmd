@@ -43,7 +43,8 @@ Shows all diversions system-wide that occurred during a cluster period, revealin
 ## Cluster 1: San Diego (SAN) - December 18-21, 2024
 
 ### Individual Cluster View: SAN Diversions Only
-**File**: `cascade_cluster_1_SAN.html`
+
+![SAN Individual Cluster Map](cascade_cluster_1_SAN.png)
 
 This map shows the 140 diversions specifically to San Diego International Airport during this 3-day period.
 
@@ -57,7 +58,8 @@ This map shows the 140 diversions specifically to San Diego International Airpor
 **What it tells us:** When SAN experiences a disruption, nearby California airports (ONT, LAX) are the first alternatives used by airlines, followed by Arizona airports (PHX, PSP).
 
 ### System-Wide View: All U.S. Diversions During SAN Cluster
-**File**: `system_wide_cluster_1_SAN.html`
+
+![SAN System-Wide Map](system_wide_cluster_1_SAN.png)
 
 This map reveals the complete aviation system response during the same period - ALL diversions across the U.S., not just those to SAN.
 
@@ -78,7 +80,8 @@ This map reveals the complete aviation system response during the same period - 
 ## Cluster 2: Dallas/Fort Worth (DFW) - November 4-5, 2024
 
 ### Individual Cluster View: DFW Diversions Only
-**File**: `cascade_cluster_2_DFW.html`
+
+![DFW Individual Cluster Map](cascade_cluster_2_DFW.png)
 
 This map shows the 110 diversions specifically to Dallas/Fort Worth International Airport during this 2-day period.
 
@@ -92,7 +95,8 @@ This map shows the 110 diversions specifically to Dallas/Fort Worth Internationa
 **What it tells us:** DFW diversions are concentrated within the Texas/South-Central region, with Houston emerging as the backup for Dallas flights.
 
 ### System-Wide View: All U.S. Diversions During DFW Cluster
-**File**: `system_wide_cluster_2_DFW.html`
+
+![DFW System-Wide Map](system_wide_cluster_2_DFW.png)
 
 This map shows all diversions during the same period across the entire U.S.
 
@@ -113,7 +117,8 @@ This map shows all diversions during the same period across the entire U.S.
 ## Cluster 3: Chicago O'Hare (ORD) - August 24-26, 2021
 
 ### Individual Cluster View: ORD Diversions Only
-**File**: `cascade_cluster_3_ORD.html`
+
+![ORD Individual Cluster Map](cascade_cluster_3_ORD.png)
 
 This map shows the 108 diversions specifically to Chicago O'Hare International Airport during this 3-day period.
 
@@ -127,7 +132,8 @@ This map shows the 108 diversions specifically to Chicago O'Hare International A
 **What it tells us:** When ORD is unavailable, the Midwest corridor airports (IND, STL, MKE) form a network of alternatives, with IND being the primary choice.
 
 ### System-Wide View: All U.S. Diversions During ORD Cluster
-**File**: `system_wide_cluster_3_ORD.html`
+
+![ORD System-Wide Map](system_wide_cluster_3_ORD.png)
 
 This map shows all diversions during the same period across the entire U.S.
 
@@ -223,7 +229,242 @@ Flight paths use quadratic Bezier curves rather than straight lines because:
 
 ---
 
-**Visualizations Created**: [DATE]
+**Visualizations Created**: December 2024
+**Data Period**: July 2021 - December 2024
+**Clusters Visualized**: 3 major diversion events
+**Total Maps**: 6 (3 cascade + 3 system-wide)
+---
+title: "Visualizations"
+---
+
+## Overview
+
+This section explains the interactive maps created to visualize flight diversion patterns. Each visualization reveals different aspects of how diversions cluster geographically and temporally across the U.S. aviation system.
+
+---
+
+## Visualization Types
+
+### Individual Cluster Maps (Cascade View)
+Shows all diversions for a single destination airport during a specific cluster period.
+
+**What it displays:**
+- Blue markers: Origin airports (where flights departed from)
+- Red stars: Diversion airports (where flights were redirected)
+- Gold diamonds: Primary destination airport
+- Curved colored lines: Flight paths, with each color representing a different airline
+
+**How to interpret:**
+- Density of colored lines = volume of diversions during the event
+- Clustering of red stars = which airports absorbed most diversions
+- Geographic spread = how far diversions traveled
+- Airline colors = which carriers were most affected
+
+### System-Wide Maps (Context View)
+Shows all diversions system-wide that occurred during a cluster period, revealing the broader impact.
+
+**What it displays:**
+- All diversions across U.S. (not just to primary destination)
+- Same color scheme as cascade maps
+- Reveals secondary effects and system disruptions
+
+**How to interpret:**
+- Compares primary cluster impact vs. system-wide impact
+- Shows whether disruption was localized or system-wide
+- Reveals which other airports absorbed overflow diversions
+
+---
+
+## Cluster 1: San Diego (SAN) - December 18-21, 2024
+
+### Individual Cluster View: SAN Diversions Only
+
+![SAN Individual Cluster Map](cascade_cluster_1_SAN.png)
+
+This map shows the 140 diversions specifically to San Diego International Airport during this 3-day period.
+
+**Key observations:**
+- Most flights originated from California and Arizona
+- Phoenix Sky Harbor (PHX) was the primary diversion airport (33 diversions)
+- Ontario International (ONT) also absorbed significant volume (48 diversions)
+- Primarily West Coast airlines affected
+- Tight geographic clustering suggests regional weather event or airport capacity issue
+
+**What it tells us:** When SAN experiences a disruption, nearby California airports (ONT, LAX) are the first alternatives used by airlines, followed by Arizona airports (PHX, PSP).
+
+### System-Wide View: All U.S. Diversions During SAN Cluster
+
+![SAN System-Wide Map](system_wide_cluster_1_SAN.png)
+
+This map reveals the complete aviation system response during the same period - ALL diversions across the U.S., not just those to SAN.
+
+**Key observations:**
+- 290 total diversions vs. 140 to SAN (48.3% to primary airport)
+- Other destinations affected: SNA (30), EYW (20), BOS (17), LAX (7)
+- 60 total destination airports affected (not just SAN)
+- 73 origin airports involved
+- Geographically widespread: West Coast, East Coast, and Southeast all impacted
+- Multiple airlines contributed to the cascade
+
+**What it tells us:** The SAN disruption had system-wide ripple effects. When one major airport is affected, diversions cascade across the entire network, affecting other cities and regions. This is a true system-wide disruption event, not just a localized issue.
+
+**Interpretation:** Only about half of flights heading to SAN were diverted there. The other half were diverted elsewhere, indicating either SAN's capacity to absorb only part of the demand, or airlines making strategic decisions to distribute diversions across multiple airports.
+
+---
+
+## Cluster 2: Dallas/Fort Worth (DFW) - November 4-5, 2024
+
+### Individual Cluster View: DFW Diversions Only
+
+![DFW Individual Cluster Map](cascade_cluster_2_DFW.png)
+
+This map shows the 110 diversions specifically to Dallas/Fort Worth International Airport during this 2-day period.
+
+**Key observations:**
+- Origins concentrated in Northeast, Southeast, and Midwest
+- Houston Intercontinental (IAH) was the primary diversion airport (28 diversions)
+- Regional pattern: Oklahoma City (OKC), San Antonio (SAT), Austin (AUS) also active
+- Primarily American and Southwest airlines (major DFW hubs)
+- Texas region tightly clustered
+
+**What it tells us:** DFW diversions are concentrated within the Texas/South-Central region, with Houston emerging as the backup for Dallas flights.
+
+### System-Wide View: All U.S. Diversions During DFW Cluster
+
+![DFW System-Wide Map](system_wide_cluster_2_DFW.png)
+
+This map shows all diversions during the same period across the entire U.S.
+
+**Key observations:**
+- 186 total diversions vs. 110 to DFW (59.1% to primary airport)
+- Secondary destinations: DAL (32), AUS (13), SAT (12)
+- 40 diversion airports used
+- 89 origin airports involved
+- More geographically concentrated than SAN event
+- Primarily South-Central U.S. (regional event)
+
+**What it tells us:** This was a more regional event compared to SAN. The disruption impact stayed concentrated in Texas/South-Central region, with 59% of diversions going to the primary airport DFW. Other regional airports absorbed the remaining volume.
+
+**Interpretation:** DFW disruptions have less system-wide impact than coastal airport disruptions. The regional nature of this event kept diversions contained within the Texas hub region.
+
+---
+
+## Cluster 3: Chicago O'Hare (ORD) - August 24-26, 2021
+
+### Individual Cluster View: ORD Diversions Only
+
+![ORD Individual Cluster Map](cascade_cluster_3_ORD.png)
+
+This map shows the 108 diversions specifically to Chicago O'Hare International Airport during this 3-day period.
+
+**Key observations:**
+- Origins from across entire U.S.: Southwest, Midwest, Northeast, Southeast
+- Indianapolis (IND) was the primary diversion airport (24 diversions)
+- Secondary diversion airports: St. Louis (STL), Milwaukee (MKE)
+- Midwest corridor heavily utilized
+- United Airlines dominant (major ORD carrier)
+
+**What it tells us:** When ORD is unavailable, the Midwest corridor airports (IND, STL, MKE) form a network of alternatives, with IND being the primary choice.
+
+### System-Wide View: All U.S. Diversions During ORD Cluster
+
+![ORD System-Wide Map](system_wide_cluster_3_ORD.png)
+
+This map shows all diversions during the same period across the entire U.S.
+
+**Key observations:**
+- 187 total diversions vs. 108 to ORD (57.8% to primary airport)
+- Secondary destinations: MCO (19), MDW (14), STL (9)
+- 51 diversion airports used
+- 87 origin airports involved
+- Similar to DFW in concentration (regional event)
+- Midwest and surrounding regions primarily affected
+
+**What it tells us:** ORD disruptions have moderate system-wide impact - less than coastal airports but more geographically spread than DFW. The Midwest location means disruptions don't cascade to both coasts, but do affect a broad Midwest-to-Southeast corridor.
+
+**Interpretation:** Hub airport disruptions vary in system-wide impact based on geography. Central hubs like ORD and DFW have more contained impacts, while coastal hubs like SAN have broader ripple effects.
+
+---
+
+## Key Insights from Visualizations
+
+### Pattern 1: Geographic Clustering of Diversions
+Diversions concentrate in specific regional hubs rather than spreading randomly:
+- **West Coast**: ONT, PHX, LAX, SFO
+- **South-Central**: IAH, DFW, SAT, AUS
+- **Midwest**: IND, STL, MKE
+
+### Pattern 2: System-Wide vs. Regional Events
+- **SAN (coastal, major hub)**: 48.3% to primary airport, 60 destinations affected (system-wide)
+- **DFW (regional hub)**: 59.1% to primary airport, 17 destinations affected (regional)
+- **ORD (central hub)**: 57.8% to primary airport, 32 destinations affected (regional-to-moderate)
+
+### Pattern 3: Airline-Specific Patterns
+Colors on maps reveal airline-specific routing:
+- Major airlines (AA, DL, UA, SW) dominate specific hubs
+- Each airline has preferred diversion airports
+- Enables prediction of diversion destinations based on carrier
+
+### Pattern 4: Cascading Effects
+When primary destination unavailable:
+1. Flights divert to nearest appropriate airport
+2. Overflow spills to secondary airports
+3. Eventually reaches tertiary alternatives if needed
+4. Creates geographic ripple effect through network
+
+---
+
+## How to Use These Visualizations
+
+### For Operational Planning
+- Airlines: Identify which airports to pre-position aircraft at for disruption management
+- Airports: Anticipate diversion volume during disruption events
+- ATC: Prepare to route traffic to alternative airports
+
+### For Understanding System Resilience
+- Notice which airports absorb diversions (IND, IAH, ONT, etc.)
+- Identify bottlenecks where diversions cannot be easily accommodated
+- Reveal geographic redundancy in the network
+
+### For Identifying Root Causes
+- Temporal clustering (all within 12 hours) suggests single root cause
+- Geographic concentration suggests capacity or weather issue
+- Airline-specific patterns visible in colored lines
+
+---
+
+## Limitations of Visualizations
+
+- **First diversion only**: Maps don't show secondary or tertiary diversions
+- **No causal data**: Cannot determine weather, mechanical, or ATC reasons
+- **Aggregated view**: Individual flight details hidden
+- **Historical only**: Past patterns don't guarantee future outcomes
+- **Mercator projection**: Distorts distances, especially at high latitudes
+
+---
+
+## Technical Details
+
+### Visualization Tools
+- **Framework**: Plotly (interactive web maps)
+- **Data**: BTS OTMC-OTP flight records
+- **Coordinate System**: WGS84 (latitude/longitude)
+- **Projection**: Mercator (standard web maps)
+
+### Map Features
+- **Interactivity**: Hover for details, zoom/pan navigation
+- **Export**: Download as PNG image using Plotly tools
+- **Colors**: Assigned by airline for pattern recognition
+
+### Bezier Curves
+Flight paths use quadratic Bezier curves rather than straight lines because:
+- Straight lines overlap and become illegible
+- Curved paths separate overlapping routes visually
+- Curves approximate great-circle routes on Mercator projection
+
+---
+
+**Visualizations Created**: December 2024
 **Data Period**: July 2021 - December 2024
 **Clusters Visualized**: 3 major diversion events
 **Total Maps**: 6 (3 cascade + 3 system-wide)

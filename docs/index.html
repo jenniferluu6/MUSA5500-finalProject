@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -280,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Results</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./05-dashboard.html" target="_blank"> 
+    <a class="nav-link" href="./05-dashboard.html"> 
 <span class="menu-text">Dashboard</span></a>
   </li>  
 </ul>
@@ -330,7 +365,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Flight Diversions: Understanding Air Traffic Disruptions</h1>
-<p class="subtitle lead">A comprehensive data science analysis of flight diversions (2021-2024)</p>
+<p class="subtitle lead">A comprehensive data science analysis of U.S. flight diversions (2021-2024)</p>
 </div>
 
 
@@ -349,16 +384,17 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="welcome" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="welcome"><span class="header-section-number">1</span> Welcome</h2>
-<p>This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining data-driven analysis with interactive visualizations, we uncover patterns in when, where, and why flights are diverted from their intended destinations. Could this tell us something about airlines as well?</p>
+<p>This project analyzes flight diversions across the United States from July 2021 through December 2024, using data from the U.S. Bureau of Transportation Statistics (BTS) and Federal Aviation Administration (FAA). By combining temporal clustering analysis with interactive geospatial visualizations, we uncover patterns in when, where, and how flights are diverted from their intended destinations—and reveal significant differences in how airlines manage disruptions.</p>
 <hr>
 </section>
 <section id="why-this-matters" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="why-this-matters"><span class="header-section-number">2</span> Why This Matters</h2>
 <p>Flight diversions represent a significant disruption to both airlines and passengers. Understanding diversion patterns helps:</p>
 <ul>
-<li><strong>Airlines</strong>: Optimize route planning and operational resilience. By identifying which airports, time periods, and recovery issues are prone to diversions, airlines can pre-position aircraft, adjust crew schedules, and reroute flights proactively. This minimizes operational costs and improves schedule reliability.</li>
-<li><strong>Policymakers</strong>: Identify systemic bottlenecks in air traffic management. Diversion clusters reveal capacity constraints at specific airports, informing infrastructure investment decisions and air traffic control policy.</li>
-<li><strong>Researchers</strong>: Better understand the vulnerabilities and resilience patterns in the aviation system. Flight diversions expose how the network responds to disruptions and reveal dependencies between airports.</li>
+<li><p><strong>Airlines</strong>: Optimize route planning and operational resilience. By identifying which airports, time periods, and routes are prone to diversions, airlines can pre-position aircraft, adjust crew schedules, and reroute flights proactively. American Airlines’ 29% higher diversion rate reveals opportunities for operational improvement through benchmarking against Delta and United.</p></li>
+<li><p><strong>Airports</strong>: Plan capacity for overflow demand. The analysis identifies consistent diversion hub airports (DEN, IAD, LAX) that naturally absorb system disruptions, informing infrastructure and ground service planning.</p></li>
+<li><p><strong>Policymakers</strong>: Identify systemic bottlenecks in air traffic management. Diversion clusters reveal capacity constraints at specific airports and demonstrate how disruptions cascade through the network, informing infrastructure investment and ATC policy decisions.</p></li>
+<li><p><strong>Researchers</strong>: Better understand the vulnerabilities and resilience patterns in the aviation system. Flight diversions expose how the network responds to disruptions and reveal dependencies between airports.</p></li>
 </ul>
 <hr>
 </section>
@@ -367,43 +403,133 @@ ul.task-list li input[type="checkbox"] {
 <section id="key-findings" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="key-findings"><span class="header-section-number">3.1</span> Key Findings</h3>
 <ul>
-<li><strong>64,816 total diversions</strong> documented across the 07/2021-12/2024 period, totaling 25,386,632 flights (0.255%)</li>
-<li><strong>10 distinct airlines</strong> in the dataset</li>
-<li>Classification of diversion clusters and their affect on the airport network across the U.S.</li>
+<li><strong>64,815 total diversions</strong> documented from July 2021 through December 2024</li>
+<li><strong>25,386,632 total flights analyzed</strong>, with 0.26% experiencing diversions</li>
+<li><strong>3 major diversion clusters</strong> identified: San Diego (system-wide), Dallas/Fort Worth (regional), Chicago O’Hare (regional)</li>
+<li><strong>American Airlines</strong> diverts 29% more frequently than Delta despite similar network size</li>
+<li><strong>System-wide events</strong> cascade across 60+ destination airports; <strong>regional events</strong> stay concentrated in geography zones</li>
+<li><strong>Top diversion hubs</strong>: Denver (1,935), Washington Dulles (1,680), Los Angeles (1,608)</li>
+<li><strong>Average arrival delay</strong> for diverted flights: 278.8 minutes (4.6 hours)</li>
 </ul>
 </section>
 <section id="methodology" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="methodology"><span class="header-section-number">3.2</span> Methodology</h3>
 <p>This project follows a complete data science pipeline:</p>
 <ol type="1">
-<li><strong>Data Collection</strong>: Aggregating 42 months of BTS data and airport location data.</li>
-<li><strong>Data Cleaning</strong>: Filtering, validation, and integration</li>
-<li><strong>Analysis</strong>: Clustering and temporal analysis.</li>
-<li><strong>Visualization</strong>: Interactive maps of major clusters and their affect on the airport system.</li>
-<li><strong>Communication</strong>: Clear documentation and insights.</li>
+<li><strong>Data Collection</strong>: Aggregating 45 months of BTS OTMC-OTP data (25.4M flights) with FAA airport coordinates</li>
+<li><strong>Data Cleaning</strong>: Filtering for diversions, validation, removing duplicates, geocoding</li>
+<li><strong>Analysis</strong>: Temporal clustering (12-hour threshold) to identify disruption events</li>
+<li><strong>Visualization</strong>: Interactive Plotly maps showing individual and system-wide impacts</li>
+<li><strong>Communication</strong>: Clear documentation and actionable insights</li>
 </ol>
 <hr>
 </section>
 </section>
-<section id="interactive-dashboard" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="interactive-dashboard"><span class="header-section-number">4</span> Interactive Dashboard</h2>
-<p>Explore the data yourself with my interactive dashboard.</p>
-<p>Interact with filters, zoom into specific airports, and explore patterns by date, and airline. :::</p>
-<hr>
-</section>
-<section id="documentation-structure" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="documentation-structure"><span class="header-section-number">5</span> Documentation Structure</h2>
-<p>This site contains:</p>
+<section id="the-three-clusters" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="the-three-clusters"><span class="header-section-number">4</span> The Three Clusters</h2>
+<section id="cluster-1-san-diego-december-2024---system-wide-disruption" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="cluster-1-san-diego-december-2024---system-wide-disruption"><span class="header-section-number">4.1</span> Cluster 1: San Diego (December 2024) - System-Wide Disruption</h3>
 <ul>
-<li><strong><a href="./01-collection.html">Data Collection</a></strong>: How I sourced and prepared the data</li>
-<li><strong><a href="./02-analysis.html">Analysis</a></strong>: Methodology, findings, and statistical insights</li>
-<li><strong><a href="./03-visualization.html">Visualizations</a></strong>: Interactive maps and their interpretations</li>
-<li><strong><a href="./04-results.html">Results</a></strong>: Key takeaways and conclusions</li>
+<li>140 diversions to SAN; 290 system-wide across 60 destinations</li>
+<li>Only 48.3% diverted to primary airport (cascaded across network)</li>
+<li>Affected 73 origin airports and 60 destination airports</li>
+<li><strong>Finding</strong>: Coastal hub disruptions have broader ripple effects through the system</li>
+</ul>
+</section>
+<section id="cluster-2-dallasfort-worth-november-2024---regional-disruption" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="cluster-2-dallasfort-worth-november-2024---regional-disruption"><span class="header-section-number">4.2</span> Cluster 2: Dallas/Fort Worth (November 2024) - Regional Disruption</h3>
+<ul>
+<li>110 diversions to DFW; 186 system-wide with regional concentration</li>
+<li>59.1% diverted to primary airport (more localized recovery)</li>
+<li>Texas corridor airports (IAH, SAT, AUS) absorbed overflow</li>
+<li><strong>Finding</strong>: Regional hubs keep diversions contained in geographic area</li>
+</ul>
+</section>
+<section id="cluster-3-chicago-ohare-august-2021---regional-disruption" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="cluster-3-chicago-ohare-august-2021---regional-disruption"><span class="header-section-number">4.3</span> Cluster 3: Chicago O’Hare (August 2021) - Regional Disruption</h3>
+<ul>
+<li>108 diversions to ORD; 187 system-wide with Midwest focus</li>
+<li>57.8% diverted to primary airport (regional coordination)</li>
+<li>Midwest corridor (IND, STL, MKE) natural overflow network</li>
+<li><strong>Finding</strong>: Hub location determines scope of cascade effects</li>
 </ul>
 <hr>
 </section>
-<section id="quick-stats" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="quick-stats"><span class="header-section-number">6</span> Quick Stats</h2>
+</section>
+<section id="american-airlines-why-the-higher-diversion-rate" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="american-airlines-why-the-higher-diversion-rate"><span class="header-section-number">5</span> American Airlines: Why the Higher Diversion Rate?</h2>
+<p>American Airlines accounts for <strong>27.7% of all diversions</strong> despite operating roughly 18-22% of U.S. flights:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Airline</th>
+<th>Diversions</th>
+<th>% of Total</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>American (AA)</strong></td>
+<td>18,004</td>
+<td>27.7%</td>
+<td><strong>Higher than market share</strong></td>
+</tr>
+<tr class="even">
+<td>United (UA)</td>
+<td>13,921</td>
+<td>21.4%</td>
+<td>Expected</td>
+</tr>
+<tr class="odd">
+<td>Delta (DL)</td>
+<td>10,886</td>
+<td>16.8%</td>
+<td><strong>Better than expected</strong></td>
+</tr>
+<tr class="even">
+<td>Southwest (WN)</td>
+<td>10,285</td>
+<td>15.8%</td>
+<td>In line</td>
+</tr>
+<tr class="odd">
+<td>Alaska (AS)</td>
+<td>3,922</td>
+<td>6.0%</td>
+<td>In line</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Possible explanations:</strong> - More aggressive scheduling relative to airport capacity - Less efficient operational recovery procedures - Different network vulnerabilities (route design, hub exposure) - Older fleet with higher mechanical diversion rates</p>
+<p>This represents both a competitive disadvantage and an opportunity for operational improvement.</p>
+<hr>
+</section>
+<section id="interactive-dashboard" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="interactive-dashboard"><span class="header-section-number">6</span> Interactive Dashboard</h2>
+<p>Explore the data yourself with the interactive dashboard:</p>
+<p><strong>Running Locally:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">cd</span> MUSA5500-finalProject</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">conda</span> activate geospatial</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">python</span> app.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then visit: <code>http://localhost:5006</code></p>
+<p><strong>Features:</strong> - Filter by airline (multi-select) - Adjust date range (July 2021 - December 2024) - Real-time map and statistics updates - Explore top 15 diversion airports - Compare airlines side-by-side</p>
+<hr>
+</section>
+<section id="documentation-structure" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="documentation-structure"><span class="header-section-number">7</span> Documentation Structure</h2>
+<p>This site contains complete documentation:</p>
+<ul>
+<li><strong><a href="./01-collection.html">Data Collection</a></strong>: Data sources, cleaning pipeline, quality assessment</li>
+<li><strong><a href="./02-analysis.html">Analysis Methodology</a></strong>: Clustering approach, statistical methods, airline comparison</li>
+<li><strong><a href="./03-visualization.html">Visualizations</a></strong>: Interactive maps with explanations of each cluster</li>
+<li><strong><a href="./04-results.html">Results &amp; Conclusions</a></strong>: Key findings, operational implications, recommendations</li>
+<li><strong><a href="./05-dashboard.html">Dashboard Documentation</a></strong>: How to use the interactive Panel dashboard</li>
+</ul>
+<hr>
+</section>
+<section id="quick-stats" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="quick-stats"><span class="header-section-number">8</span> Quick Stats</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -413,73 +539,124 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Time Period</strong></td>
-<td>July 2021 - December 2024</td>
+<td><strong>Analysis Period</strong></td>
+<td>July 2021 - December 2024 (45 months)</td>
 </tr>
 <tr class="even">
-<td><strong>Data Sources</strong></td>
-<td>BTS OTMC-OTP Database, FAA Database</td>
-</tr>
-<tr class="odd">
-<td><strong>Analysis Type</strong></td>
-<td>Geospatial Clustering, Temporal Analysis</td>
-</tr>
-<tr class="even">
-<td><strong>Visualizations</strong></td>
-<td>Interactive Plotly maps</td>
+<td><strong>Total Flights</strong></td>
+<td>25,386,632</td>
 </tr>
 <tr class="odd">
 <td><strong>Total Diversions</strong></td>
-<td>64,816</td>
+<td>64,815</td>
+</tr>
+<tr class="even">
+<td><strong>Diversion Rate</strong></td>
+<td>0.26%</td>
+</tr>
+<tr class="odd">
+<td><strong>Airlines</strong></td>
+<td>10 major carriers</td>
+</tr>
+<tr class="even">
+<td><strong>Airports</strong></td>
+<td>377 diversion airports, 373 destination airports</td>
+</tr>
+<tr class="odd">
+<td><strong>Avg Departure Delay</strong></td>
+<td>32.2 minutes</td>
+</tr>
+<tr class="even">
+<td><strong>Avg Arrival Delay</strong></td>
+<td>278.8 minutes</td>
+</tr>
+<tr class="odd">
+<td><strong>Major Clusters</strong></td>
+<td>3 (SAN, DFW, ORD)</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="about-this-project" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="about-this-project"><span class="header-section-number">7</span> About This Project</h2>
-<p>This analysis was conducted as a final project for a Python data science course, emphasizing:</p>
+<section id="about-this-project" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="about-this-project"><span class="header-section-number">9</span> About This Project</h2>
+<p>This analysis was conducted as a final project for <strong>MUSA 5500: Data Science for Planning and Policy</strong> at the University of Pennsylvania, emphasizing:</p>
 <ul>
-<li>Multi-source data integration</li>
-<li>Complex geospatial analysis</li>
-<li>Interactive web-based visualization</li>
-<li>Clear communication of technical findings</li>
+<li>Multi-source data integration (BTS + FAA databases)</li>
+<li>Complex geospatial and temporal clustering analysis</li>
+<li>Interactive web-based visualization and exploration</li>
+<li>Clear communication of technical findings to multiple audiences</li>
+<li>Actionable recommendations for industry stakeholders</li>
 </ul>
-<section id="technologies-used" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="technologies-used"><span class="header-section-number">7.1</span> Technologies Used</h3>
+<section id="technologies-used" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="technologies-used"><span class="header-section-number">9.1</span> Technologies Used</h3>
 <ul>
-<li><strong>Data Processing</strong>: Pandas, GeoPandas, NumPy</li>
-<li><strong>Analysis</strong>: Scikit-learn (K-means clustering), SciPy</li>
-<li><strong>Visualization</strong>: Plotly, Matplotlib</li>
-<li><strong>Documentation</strong>: Quarto, Jupyter</li>
-<li><strong>Deployment</strong>: GitHub Pages</li>
+<li><strong>Data Processing</strong>: Pandas (2.3.1), NumPy (2.3.1), GeoPandas (1.0.1)</li>
+<li><strong>Analysis</strong>: Temporal clustering (custom 12-hour threshold algorithm)</li>
+<li><strong>Visualization</strong>: Plotly (6.5.0), Panel (1.7.5), Matplotlib</li>
+<li><strong>Documentation</strong>: Quarto, Jupyter Notebook</li>
+<li><strong>Dashboard</strong>: Panel (local deployment)</li>
+<li><strong>Code</strong>: Python 3.13, GitHub</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="get-started" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="get-started"><span class="header-section-number">8</span> Get Started</h2>
+<section id="key-insights-for-stakeholders" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="key-insights-for-stakeholders"><span class="header-section-number">10</span> Key Insights for Stakeholders</h2>
+<section id="for-airlines" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="for-airlines"><span class="header-section-number">10.1</span> For Airlines:</h3>
 <ol type="1">
-<li>Read through the <a href="./01-collection.html">Data Collection</a> section to understand the data sources</li>
-<li>Explore the <a href="./02-analysis.html">Analysis</a> for methodology</li>
-<li>Check out the <a href="./03-visualization.html">Visualizations</a> for interactive exploration</li>
+<li>Pre-position crews and aircraft at hub diversion airports (DEN, IAD, LAX)</li>
+<li>Implement tiered disruption protocols (regional vs.&nbsp;system-wide)</li>
+<li>Benchmark operational practices against DL and UA</li>
+<li>Monitor routes with historically high diversion risk</li>
+</ol>
+</section>
+<section id="for-airports" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="for-airports"><span class="header-section-number">10.2</span> For Airports:</h3>
+<ol type="1">
+<li>Plan for surge capacity at consistent diversion hubs</li>
+<li>Establish regional coordination agreements (Texas, Midwest corridors)</li>
+<li>Position ground crews to handle unexpected diversion traffic</li>
+</ol>
+</section>
+<section id="for-policy" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="for-policy"><span class="header-section-number">10.3</span> For Policy:</h3>
+<ol type="1">
+<li>Infrastructure investment should target secondary hubs that absorb diversions</li>
+<li>ATC coordination between regional clusters can mitigate cascade effects</li>
+<li>Monitor whether system is near saturation during peak periods</li>
 </ol>
 <hr>
 </section>
-<section id="questions" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="questions"><span class="header-section-number">9</span> Questions?</h2>
-<p>This project demonstrates: - Sound data science methodology - Complex analysis of real-world aviation data - Clear communication of technical findings - Effective use of interactive visualization</p>
-<p>For questions about the methodology, data sources, or analysis approach, see the detailed documentation pages.</p>
+</section>
+<section id="get-started" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="get-started"><span class="header-section-number">11</span> Get Started</h2>
+<ol type="1">
+<li><strong>Start here</strong>: Read the <a href="./index.html">overview</a></li>
+<li><strong>Understand the data</strong>: Check <a href="./01-collection.html">Data Collection</a></li>
+<li><strong>Learn the approach</strong>: Review <a href="./02-analysis.html">Analysis Methodology</a></li>
+<li><strong>Explore visually</strong>: See the <a href="./03-visualization.html">Visualizations</a></li>
+<li><strong>Understand findings</strong>: Read <a href="./04-results.html">Results &amp; Conclusions</a></li>
+</ol>
 <hr>
 </section>
-<section id="citation" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="citation"><span class="header-section-number">10</span> Citation</h2>
-<p>If you reference this analysis, please cite as:</p>
-<blockquote class="blockquote">
-<p>Luu, Jennifer. (2024). Flight Diversions: A Data Science Analysis. GitHub Repository: [add repo link]</p>
-</blockquote>
+<section id="technical-details" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="technical-details"><span class="header-section-number">12</span> Technical Details</h2>
+<p><strong>Data Sources:</strong> - Bureau of Transportation Statistics (BTS): https://www.transtats.bts.gov/ - Federal Aviation Administration (FAA): https://www.faa.gov/ - OpenFlights Database: https://openflights.org/</p>
+<p><strong>Code Repository:</strong> - GitHub: MUSA5500-finalProject (private - available by request)</p>
+<p><strong>Reproducibility:</strong> - All analysis code included in Jupyter notebooks - Data pipeline documented and reproducible - Environment specifications provided (Python 3.13, Pandas 2.3.1, etc.)</p>
 <hr>
-<p><strong>Last Updated</strong>: [DATE]</p>
+</section>
+<section id="questions" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="questions"><span class="header-section-number">13</span> Questions?</h2>
+<p>This project demonstrates: - Sound data science methodology applied to real-world aviation data - Complex analysis combining temporal, geospatial, and statistical methods - Clear communication of technical findings to diverse audiences - Effective use of interactive visualization for exploration and discovery - Actionable insights that drive operational and policy decisions</p>
+<p>For questions about the methodology, data sources, analysis approach, or findings, see the detailed documentation pages or review the code in the Jupyter notebooks.</p>
+<hr>
+<p><strong>Project Completed</strong>: December 2024<br>
+<strong>Analysis Period</strong>: July 2021 - December 2024<br>
+<strong>Author</strong>: Jun<br>
+<strong>Course</strong>: MUSA 5500: Data Science for Planning and Policy</p>
 
 
 </section>
