@@ -1,7 +1,7 @@
 project:
   type: website
   title: "Flight Diversions: A Data Science Analysis"
-  output-dir: _output
+  output-dir: docs
 
 website:
   title: "Flight Diversions Analysis"

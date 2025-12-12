@@ -112,15 +112,4 @@ This project demonstrates:
 
 For questions about the methodology, data sources, or analysis approach, see the detailed documentation pages.
 
----
 
-## Citation
-
-If you reference this analysis, please cite as:
-
-> Luu, Jennifer. (2024). Flight Diversions: A Data Science Analysis. 
-> GitHub Repository: [add repo link]
-
----
-
-**Last Updated**: [DATE]
