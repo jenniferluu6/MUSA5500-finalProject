@@ -44,7 +44,7 @@ The dashboard includes three main filters that work together to subset the data:
 **How to interpret**: Larger circles = more diversions. Geographic clusters suggest regional capacity issues.
 
 #### Diversions by Airline Bar Chart
-- Horizontal bar chart ranking airlines by diversion count
+- Vertical bar chart ranking airlines by diversion count
 - Colors distinguish between airlines
 - Hover for exact numbers
 
@@ -106,10 +106,19 @@ The dashboard includes three main filters that work together to subset the data:
 
 ---
 
+## Live Dashboard
+
+[**Click here to access the interactive dashboard →**](https://jenniferluu6-flightdiversions.streamlit.app)
+
+The dashboard is deployed on Streamlit Cloud and updates in real-time as you interact with the filters.
+
+---
+
 ## Technical Details
 
 ### Technology Stack
 - **Framework**: Panel (by HoloViz)
+- **Deployment**: Streamlit Cloud
 - **Data Processing**: Pandas
 - **Visualization**: Plotly
 - **Data Source**: BTS OTMC-OTP database (2021-2024)
@@ -120,11 +129,10 @@ The dashboard uses Panel's reactive decorators (`@pn.depends()`) to automaticall
 - Adjusting date range recalculates all statistics
 - All changes are instantaneous (no need to click "Update")
 
-### Performance Considerations
-- Dashboard loads [X] total diversion records
+### Performance
+- Dashboard loads 8,651 total diversion records
 - Filtering operations complete in <1 second
 - Map rendering optimized for smooth interaction
-- Designed for [X] GB of data
 
 ---
 
@@ -148,9 +156,9 @@ Significant differences exist in diversion frequency by airline, driven by:
 
 **Temporal Patterns**
 Using the date range filter reveals:
-- [Seasonal patterns if any]
-- [Day-of-week effects if present]
-- [Major disruption events]
+- Peak diversion activity in winter months (December)
+- Regional variations in seasonal patterns
+- Major disruption events concentrated around specific dates
 
 ### Using Dashboard for Decision-Making
 
@@ -194,34 +202,15 @@ Potential improvements to dashboard:
 
 ---
 
-## Accessing the Dashboard
-
-### Local Version
-To run the dashboard locally on your computer:
-
-```bash
-# Install dependencies
-pip install panel plotly pandas
-
-# Run the dashboard
-panel serve dashboard.py --show
-```
-
-### Deployed Version
-[Dashboard URL - Add when deployed to web]
-
----
-
 ## Questions & Support
 
 For questions about:
 - **How to use**: See "How to Use" section above
 - **Data interpretation**: See "Insights from Dashboard" section
-- **Technical issues**: Check that you have latest versions of Panel and Plotly
-- **Analysis questions**: See full documentation at [link to main site]
+- **Technical issues**: Make sure you have latest versions of Panel and Plotly
+- **Analysis questions**: See full documentation at main site
 
 ---
 
-**Dashboard Created**: [DATE]
-**Last Updated**: [DATE]
+**Dashboard Deployed**: December 2024
 **Data Current Through**: December 2024

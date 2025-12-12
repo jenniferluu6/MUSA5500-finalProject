@@ -11,13 +11,13 @@ diverted_flights['FlightDate'] = pd.to_datetime(diverted_flights['FlightDate'])
 
 # Load airport coordinates
 airports_clean = pd.read_csv('airports.csv')
-airports_clean = airports_clean.set_index('IATA_Code')[['latitude', 'longitude']]
+airports_clean = airports_clean.set_index('AIRPORT')[['LATITUDE', 'LONGITUDE']]
 
 # Define get_coords function
 def get_coords(airport_code, airport_df):
     if airport_code in airport_df.index:
         coords = airport_df.loc[airport_code]
-        return (coords['latitude'], coords['longitude'])
+        return (coords['LATITUDE'], coords['LONGITUDE'])
     return (None, None)
 
 # Filters
