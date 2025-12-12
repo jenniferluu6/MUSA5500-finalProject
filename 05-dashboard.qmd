@@ -66,6 +66,22 @@ The dashboard includes three main filters that work together to subset the data:
 
 ## How to Use the Dashboard
 
+### Running Locally
+
+To run the dashboard on your computer:
+```bash
+# Navigate to project directory
+cd MUSA5500-finalProject
+
+# Activate geospatial environment
+conda activate geospatial
+
+# Run the app
+python app.py
+```
+
+Then open your browser and go to: `http://localhost:5006`
+
 ### Basic Workflow
 
 1. **Start with full dataset**
@@ -106,19 +122,10 @@ The dashboard includes three main filters that work together to subset the data:
 
 ---
 
-## Live Dashboard
-
-[**Click here to access the interactive dashboard →**](https://jenniferluu6-flightdiversions.streamlit.app)
-
-The dashboard is deployed on Streamlit Cloud and updates in real-time as you interact with the filters.
-
----
-
 ## Technical Details
 
 ### Technology Stack
 - **Framework**: Panel (by HoloViz)
-- **Deployment**: Streamlit Cloud
 - **Data Processing**: Pandas
 - **Visualization**: Plotly
 - **Data Source**: BTS OTMC-OTP database (2021-2024)
@@ -207,10 +214,10 @@ Potential improvements to dashboard:
 For questions about:
 - **How to use**: See "How to Use" section above
 - **Data interpretation**: See "Insights from Dashboard" section
-- **Technical issues**: Make sure you have latest versions of Panel and Plotly
+- **Technical issues**: Make sure you have Panel, Plotly, and Pandas installed in your geospatial environment
 - **Analysis questions**: See full documentation at main site
 
 ---
 
-**Dashboard Deployed**: December 2024
+**Dashboard Created**: December 2024
 **Data Current Through**: December 2024
