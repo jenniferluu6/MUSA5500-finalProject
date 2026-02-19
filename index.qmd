@@ -147,7 +147,7 @@ This site contains complete documentation:
 
 ## About This Project
 
-This analysis was conducted as a final project for **MUSA 5500: Data Science for Planning and Policy** at the University of Pennsylvania, emphasizing:
+This analysis was conducted as a final project for **MUSA 5500: Geospatial Data Science in Python** at the University of Pennsylvania, emphasizing:
 
 - Multi-source data integration (BTS + FAA databases)
 - Complex geospatial and temporal clustering analysis
@@ -226,8 +226,8 @@ For questions about the methodology, data sources, analysis approach, or finding
 
 ---
 
-**Project Completed**: December 2024  
+**Project Completed**: December 2025  
 **Analysis Period**: July 2021 - December 2024  
-**Author**: Jun  
-**Course**: MUSA 5500: Data Science for Planning and Policy
+**Author**: Jun (Jennifer) Luu
+**Course**: MUSA 5500: Geospatial Data Science in Python
 

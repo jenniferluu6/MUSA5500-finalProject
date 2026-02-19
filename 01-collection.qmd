@@ -344,7 +344,7 @@ See the [Analysis Methodology](02-analysis.qmd) section for details on analytica
 
 ---
 
-**Data Collection Date**: December 2024
+**Data Collection Date**: December 2025
 **Analysis Period**: July 2021 - December 2024
 **Total Records**: 64,815 diversions from 25,386,632 total flights
 **Data Quality**: 100% completeness for primary analysis fields

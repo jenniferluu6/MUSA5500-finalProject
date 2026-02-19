@@ -464,7 +464,7 @@ Flight paths use quadratic Bezier curves rather than straight lines because:
 
 ---
 
-**Visualizations Created**: December 2024
+**Visualizations Created**: December 2025
 **Data Period**: July 2021 - December 2024
 **Clusters Visualized**: 3 major diversion events
 **Total Maps**: 6 (3 cascade + 3 system-wide)

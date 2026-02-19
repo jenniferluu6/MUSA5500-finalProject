@@ -399,14 +399,14 @@ This work demonstrates that publicly available transportation data, when combine
 
 ## About This Analysis
 
-**Project Type**: Data Science Final Project (MUSA 5500)
+**Project Type**: Geospatial Data Science in Python (MUSA 5500)
 **Analysis Period**: July 2021 - December 2024
 **Total Records**: 64,815 flight diversions
 **Methods**: Temporal clustering (12-hour threshold), geospatial analysis, statistical analysis
 **Technologies**: Python, Pandas, NumPy, Plotly, Jupyter Notebook
 
-**Author**: Jun
-**Date Completed**: December 2024
+**Author**: Jun (Jennifer) Luu
+**Date Completed**: December 2025
 **Last Updated**: December 12, 2025
 
 ---

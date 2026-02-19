@@ -315,7 +315,7 @@ Potential extensions to this analysis:
 
 ---
 
-**Analysis Completed**: December 2024
+**Analysis Completed**: December 2025
 **Total Analysis Time**: 45-month dataset (July 2021 - December 2024)
 **Total Records Analyzed**: 64,815 flight diversions
 **Data Quality**: 100% geographic and airline information complete
